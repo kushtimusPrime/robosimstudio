@@ -1,0 +1,22 @@
+[
+  {
+    "asset": "housing_original.npz",
+    "identical": true
+  },
+  {
+    "asset": "cover_bevels.npz",
+    "identical": true
+  },
+  {
+    "asset": "PSM1_label.png",
+    "identical": true
+  },
+  {
+    "asset": "PSM2_label.png",
+    "identical": true
+  },
+  {
+    "asset": "PSM3_label.png",
+    "identical": true
+  }
+]

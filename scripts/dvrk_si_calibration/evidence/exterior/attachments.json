@@ -1,0 +1,23 @@
+[
+  {
+    "frame": 0,
+    "moving_mesh_instances": 130,
+    "max_position_error_m": 9.642468189956866e-08,
+    "max_rotation_error_deg": 5.80423469846945e-06,
+    "paused_replay": true
+  },
+  {
+    "frame": 94,
+    "moving_mesh_instances": 130,
+    "max_position_error_m": 9.642468189956866e-08,
+    "max_rotation_error_deg": 6.056927860929542e-06,
+    "paused_replay": true
+  },
+  {
+    "frame": 188,
+    "moving_mesh_instances": 130,
+    "max_position_error_m": 9.892164687135014e-08,
+    "max_rotation_error_deg": 5.220814803465724e-06,
+    "paused_replay": true
+  }
+]

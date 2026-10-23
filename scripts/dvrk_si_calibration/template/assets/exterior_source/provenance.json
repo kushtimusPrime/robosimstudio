@@ -1,0 +1,8 @@
+{
+  "source": "jhu-dvrk/dvrk_model",
+  "commit": "90472a933995acaa88d84eb5c58aeee4cd17e9f3",
+  "path": "meshes/instruments/housing/Si/housing_Si.obj",
+  "sha256": "a09c0c4a0423d0ae7e5b9dbadec707a3c29b861ca3c20d1a8cadcc6e4c89046a",
+  "license": "MIT",
+  "conversion": "Separate original material groups; weld only coincident vertices at 1 nm precision. No simplification."
+}

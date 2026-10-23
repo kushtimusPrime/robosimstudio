@@ -1,0 +1,50 @@
+[
+  {
+    "setup": "setup_001",
+    "frame": 244,
+    "role": "tune",
+    "state_camera_physics_equal": true,
+    "silhouette_changed_pixels": 0,
+    "depth_max_change_m": 0.0
+  },
+  {
+    "setup": "setup_010",
+    "frame": 352,
+    "role": "tune",
+    "state_camera_physics_equal": true,
+    "silhouette_changed_pixels": 0,
+    "depth_max_change_m": 0.0
+  },
+  {
+    "setup": "setup_020",
+    "frame": 126,
+    "role": "tune",
+    "state_camera_physics_equal": true,
+    "silhouette_changed_pixels": 0,
+    "depth_max_change_m": 0.0
+  },
+  {
+    "setup": "setup_017",
+    "frame": 94,
+    "role": "regression",
+    "state_camera_physics_equal": true,
+    "silhouette_changed_pixels": 0,
+    "depth_max_change_m": 0.0
+  },
+  {
+    "setup": "setup_006",
+    "frame": 91,
+    "role": "evaluation",
+    "state_camera_physics_equal": true,
+    "silhouette_changed_pixels": 0,
+    "depth_max_change_m": 0.0
+  },
+  {
+    "setup": "setup_027",
+    "frame": 42,
+    "role": "evaluation",
+    "state_camera_physics_equal": true,
+    "silhouette_changed_pixels": 0,
+    "depth_max_change_m": 0.0
+  }
+]

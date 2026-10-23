@@ -1,0 +1,36 @@
+{
+  "source_sha256": "ac42a029b2542bae6d44f5d8362811733748e4b6d995299256dce7af369f1f36",
+  "tuning_cases": [
+    [
+      "setup_001",
+      244
+    ],
+    [
+      "setup_010",
+      352
+    ],
+    [
+      "setup_020",
+      126
+    ]
+  ],
+  "regression_case": [
+    "setup_017",
+    94
+  ],
+  "evaluation_cases": [
+    [
+      "setup_006",
+      91
+    ],
+    [
+      "setup_027",
+      42
+    ]
+  ],
+  "excluded_final_test_episodes": [
+    "tissue_6/2_needle_throw/20250501-194221-341946",
+    "tissue_7/2_needle_throw/20250502-195952-837967"
+  ],
+  "normal_handling": "Weld coincident wall vertices only, because the force-mesh OBJ loader discards explicit normal records; triangle surfaces and caps are preserved."
+}

@@ -1,0 +1,160 @@
+{
+  "blender": "4.2.0",
+  "segments": 4,
+  "angle_threshold_degrees": 30,
+  "clamp_overlap": true,
+  "records": [
+    {
+      "mesh": "SUJ/Si/ECM/SUJ_ECM_L0.stl",
+      "sha256": "ff0ab8d009acbc38e5fce53d706797f400c960b0803cb53a3821acaa980f5d14",
+      "source_faces": 196,
+      "output_faces": 1436,
+      "bounds_max_change_m": 2.034008502960205e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/ECM/SUJ_ECM_L1.stl",
+      "sha256": "85a9fd2ac7cb73ad73ee5992a57110c899d492b849bcd642fe46abd0ca94a500",
+      "source_faces": 536,
+      "output_faces": 2776,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/ECM/SUJ_ECM_L2.stl",
+      "sha256": "669e28b1f17fb159cce4f343c402fb7cfe2a024b86564c77c597eadfa607cfcd",
+      "source_faces": 518,
+      "output_faces": 2798,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/ECM/SUJ_ECM_L3.stl",
+      "sha256": "240251a1c21a6071c958ad4ce54421eaabb05384975b0b07b8a4a6a80ce5243d",
+      "source_faces": 1016,
+      "output_faces": 3804,
+      "bounds_max_change_m": 8.111819624900818e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM12/SUJ_PSM12_L0.stl",
+      "sha256": "c7a106a2adb1214336caac238b66ebf37f051b4b8c29976fa72923bde5c8b683",
+      "source_faces": 182,
+      "output_faces": 1366,
+      "bounds_max_change_m": 1.1548399925231934e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM12/SUJ_PSM12_L1.stl",
+      "sha256": "779c791e66a76b8eea9e07d431c2fb46e207a30d6cfafe75d19359e42ad02c9e",
+      "source_faces": 494,
+      "output_faces": 2470,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM12/SUJ_PSM12_L2.stl",
+      "sha256": "085dc5933db1351a1251e1294c08143ce024741d851061dc4429adcc2958ddb6",
+      "source_faces": 524,
+      "output_faces": 2492,
+      "bounds_max_change_m": 6.083399057388306e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM12/SUJ_PSM12_L3.stl",
+      "sha256": "1aaa5558a6a793870f5379befadac4db760284acc3665697e3c6a898e1bdc39e",
+      "source_faces": 1022,
+      "output_faces": 2614,
+      "bounds_max_change_m": 0.0005028322339057922,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM3/SUJ_PSM3_L0.stl",
+      "sha256": "da83df578bb812f2e78451a91153800497f8754ae42fec8225ff5099fb678f79",
+      "source_faces": 196,
+      "output_faces": 1436,
+      "bounds_max_change_m": 2.127140760421753e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM3/SUJ_PSM3_L1.stl",
+      "sha256": "9ae3bd7fff4acea428c8685440bb1509a45d98122dbb9aa5430aeb29e47a9df2",
+      "source_faces": 650,
+      "output_faces": 2882,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM3/SUJ_PSM3_L2.stl",
+      "sha256": "0e7633b3e0b0a18dcebfd22ac14eca57c2263341c8b3adbb2d5afe2177e2eb88",
+      "source_faces": 498,
+      "output_faces": 2506,
+      "bounds_max_change_m": 6.213784217834473e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM3/SUJ_PSM3_L3.stl",
+      "sha256": "085dc5933db1351a1251e1294c08143ce024741d851061dc4429adcc2958ddb6",
+      "source_faces": 524,
+      "output_faces": 2492,
+      "bounds_max_change_m": 6.083399057388306e-06,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "SUJ/Si/PSM/PSM3/SUJ_PSM3_L4.stl",
+      "sha256": "a596fd83d37db68e06efee54200f4f2804a9affbafe337532994c27c3bbec35b",
+      "source_faces": 1378,
+      "output_faces": 3026,
+      "bounds_max_change_m": 7.759779691696167e-05,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "arms/Si/USM/USM_base.stl",
+      "sha256": "d3922b0db21b524977494ae4c837695e335a57aa31d0ca11e16582fb8ee34d26",
+      "source_faces": 198,
+      "output_faces": 1222,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "arms/Si/USM/USM_pitch.stl",
+      "sha256": "c835f1eddf9ca2d604b390f0fe29e4eead8f3eeb6ac787a4a7679c7939d41714",
+      "source_faces": 312,
+      "output_faces": 1720,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "arms/Si/USM/USM_pitch_3.stl",
+      "sha256": "ee413eff48045c71ce192e6f7f7859d8979830a44ed79ab167672d9e70011681",
+      "source_faces": 276,
+      "output_faces": 1868,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "arms/Si/USM/USM_pitch_4.stl",
+      "sha256": "a8a41ac14fae4c23d3ac07eb053de120a14c6ed7aa675d7faa269fd388a0aead",
+      "source_faces": 266,
+      "output_faces": 2354,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "arms/Si/USM/USM_yaw.stl",
+      "sha256": "6f543ee4ee81db186f4cd841315fd13d54a4063b851fe50440e1ae5e30f1ee4f",
+      "source_faces": 326,
+      "output_faces": 1790,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    },
+    {
+      "mesh": "tower.stl",
+      "sha256": "f704dc22c0d614f1b2996e3e456149e3605a456d0013a54885859e6c70ecbfd5",
+      "source_faces": 212,
+      "output_faces": 3316,
+      "bounds_max_change_m": 0.0,
+      "bevel_m": 0.0012
+    }
+  ]
+}

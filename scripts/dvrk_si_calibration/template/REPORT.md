@@ -2,6 +2,13 @@
 
 ## What still differs from the reference
 
+The [wider appearance survey](APPEARANCE_SURVEY.md) reviewed 122 cached episodes
+across 66 setup groups, excluding both final-test episodes. It adds duller existing
+collars, modest housing roughness and smoother shaft-wall shading, with unchanged
+geometry. `run/appearance_survey/review_overview.png` compares six poses across
+six fitted setups. Jaw profiles and endoscope illumination remain the larger
+mismatches; some setups render too dark. This is a sampled review, not every frame.
+
 The optional appearance pass is described in [APPEARANCE.md](APPEARANCE.md).
 It adds steel/coating PBR surfaces, fine procedural roughness, existing CAD detail,
 a 40 µm inward DeBakey visual bevel and scope-mounted RTX lighting. The six-frame
@@ -96,6 +103,22 @@ its own lights; the paired scope emitters apply only to RTX endoscope renders.
   is preserved in `run/REPORT_single_session.md`.
 
 ## Checks and comparisons
+
+Paused replay display fix: replay changes FK without advancing the step counter,
+so Studio's normal draw throttle could leave browser meshes at an older pose
+while IK handles, frusta and RTX snapshots were current. `replay()` now calls
+`session.draw()` after updating FK and handles. At frames 0, 94 and 188, all ten
+PSM1/PSM2 jaw mesh instances match simulation transforms to zero position error
+and at most 1.5e-15 degrees rotation error, without advancing or unpausing.
+At frame 94 the mapped total opening is PSM1 5.06 degrees, PSM2 11.14 degrees.
+`run/appearance_survey/paused_replay_check.json` records the check. This fixes
+stale display, not calibration or jaw mapping; earlier RTX comparisons are unaffected.
+
+Wider survey refinement: six paired replays have bit-identical depth, identical
+silhouettes and frame/physics state; 420 protected files remain unchanged;
+453 landmark projections change by 0.0 px. See
+`run/appearance_survey/verification.json` and `summary.json`. The six-frame
+comparison is against approved appearance commit `6445512`, not the grey model.
 
 Appearance verification: six paired 960×540 renders (setup_017: 0/94/188 tuning,
 219 evaluation; setup_015: 32/161 evaluation), identical joint/body/camera/handle
@@ -238,3 +261,51 @@ of rapidly rotating wrists, checking whether time offsets vary by episode, and
 fitting the other setup groups and stereo/wrist cameras. An exact image match is
 not established by this pass, and the reported worst cases remain visible rather
 than being removed from the evaluation.
+
+
+## Exterior scan appearance pass (2026-10-23)
+
+The optional `EXTERIOR` layer restores intact instrument housings, adds
+scan-informed blue polymer and tool-specific printed labels, satin larger
+covers with 1.2 mm visual bevels, seams/fasteners, and scope collar details.
+See [EXTERIOR.md](EXTERIOR.md) for the reusable generators and assumptions.
+No object motion or manipulation behavior was introduced. The comparison
+viewpoints move only the free inspection camera; the robot is replayed at
+recorded configurations and calibration stays fixed.
+
+Remaining differences: coarse original cover contours, simplified insertion
+stages, approximate scope cage details and typeface, no full wheeled cart base
+or cable reconstruction. Exposure and lighting differ from the handheld scan.
+The existing final-test episodes were not used.
+
+Validation: 421 protected files unchanged; near-tool silhouettes/depth unchanged
+at setup_017 frames 0/94/188 and setup_006 frame 91; 130 moving PBR instances
+follow FK within 0.1 micrometre at three paused poses. Source assets regenerate
+identically. Live gate: finite, overlap 0.00 mm, rest drift 0.00 mm in 60 steps.
+The RGB renders retain small sampling/reflection differences; depth consistency
+is not a claim of real-image accuracy. No browser client was connected for
+a browser framebuffer capture; images are from Studio's RTX renderer.
+
+Judged images: `run/exterior/tool_comparison.png`, `scope_comparison.png`,
+`arm_comparison.png`, `robot_comparison.png`, `endoscope_preservation.png`.
+
+
+### Sliding-carriage follow-up
+
+Added the missing rounded visual support between each PSM tool housing and
+its insertion rail, using the detached-tool mounting scan as reference.
+Housing and shaft placements, all non-visual URDF data and the calibrated
+camera remain unchanged. Carriage outline dimensions and the opaque sterile
+interface are visual assumptions; hidden drive hardware remains omitted.
+See EXTERIOR.md. Judged `carriage_comparison.png`, `carriage_travel.png` and
+`carriage_endoscope.png` in `run/exterior/`. Rail contact checks span 27 arm /
+pitch / insertion configurations. Live gate passed: finite, 0.00 mm reported
+overlap, 0.00 mm drift over 60 steps. This remains recorded-FK inspection,
+not a manipulation demonstration or mechanical reconstruction of the drives.
+
+Carriage regression checks also passed setup_006 frame 91: four captures across
+two setups retain identical entire-image depth, joints/body state, physics and
+camera data. All 421 protected source files retain their hashes. RGB can differ
+with sampling/reflections. `carriage_preservation.json` records these checks.
+The page actions now use Studio's generator callback signature; the carriage
+inspection button is exercised through `ctl play`, not only direct evaluation.

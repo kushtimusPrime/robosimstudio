@@ -1,0 +1,14 @@
+{
+  "reviewed_episodes": 122,
+  "reviewed_setup_groups": 66,
+  "protected_files_unchanged": 420,
+  "paired_pose_count": 6,
+  "depth_identical": true,
+  "silhouette_changed_pixels": 0,
+  "projection_change_max_px": 0.0,
+  "loaded_shaft_radial_normal_error_max_degrees": 0.0069975089646991595,
+  "normal_check_is_mesh_load_check": true,
+  "source_sha256": "ac42a029b2542bae6d44f5d8362811733748e4b6d995299256dce7af369f1f36",
+  "no_downloads": true,
+  "final_test_episodes_excluded": true
+}

@@ -1,0 +1,43 @@
+{
+  "frozen_source_files_unchanged": 421,
+  "exterior_comparison_cameras_identical": true,
+  "cases": [
+    {
+      "case": "endo_000",
+      "state_camera_physics_equal": true,
+      "near_tool_depth_equal": true,
+      "tool_silhouette_changed_pixels": 0,
+      "whole_image_depth_changed_pixels": 0,
+      "tool_rgb_mean_abs_255": 0.8070205598601782,
+      "tool_rgb_p99_abs_255": 5.0
+    },
+    {
+      "case": "endo_094",
+      "state_camera_physics_equal": true,
+      "near_tool_depth_equal": true,
+      "tool_silhouette_changed_pixels": 0,
+      "whole_image_depth_changed_pixels": 0,
+      "tool_rgb_mean_abs_255": 5.420556603306022,
+      "tool_rgb_p99_abs_255": 33.0
+    },
+    {
+      "case": "endo_188",
+      "state_camera_physics_equal": true,
+      "near_tool_depth_equal": true,
+      "tool_silhouette_changed_pixels": 0,
+      "whole_image_depth_changed_pixels": 0,
+      "tool_rgb_mean_abs_255": 2.3806614602024485,
+      "tool_rgb_p99_abs_255": 19.0
+    },
+    {
+      "case": "setup006_091",
+      "state_camera_physics_equal": true,
+      "near_tool_depth_equal": true,
+      "tool_silhouette_changed_pixels": 0,
+      "whole_image_depth_changed_pixels": 3464,
+      "tool_rgb_mean_abs_255": 0.5055671691378606,
+      "tool_rgb_p99_abs_255": 4.0
+    }
+  ],
+  "same_state_repeat_tool_rgb_mean_abs_255": 2.297557654534499
+}

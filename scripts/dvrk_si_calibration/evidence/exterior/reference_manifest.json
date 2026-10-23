@@ -1,0 +1,65 @@
+{
+  "videos": [
+    {
+      "file": "endo.MOV",
+      "sha256": "4894d2ec6a1f9c24e3085e66f62187451d34ccb6f270c8db072c9ff67affb809",
+      "bytes": 62919075
+    },
+    {
+      "file": "full_robot.MOV",
+      "sha256": "8b12d7edf69212cdae110a7d0361bf81945d6e29dec947b5e7ba5bbf9cd82e94",
+      "bytes": 170925386
+    },
+    {
+      "file": "tool.MOV",
+      "sha256": "101e961a3ee0e31e136d6f2daa2c9944d858a1776314906292e32de6677b65ab",
+      "bytes": 1278504812
+    }
+  ],
+  "review_seconds": {
+    "tool": [
+      2,
+      8,
+      14,
+      20,
+      26,
+      32,
+      38,
+      44,
+      50,
+      56,
+      62,
+      68,
+      74
+    ],
+    "endo": [
+      2,
+      8,
+      14,
+      20,
+      26,
+      32,
+      38,
+      44,
+      50
+    ],
+    "full_robot": [
+      2,
+      12,
+      22,
+      32,
+      42,
+      52,
+      62,
+      72,
+      82,
+      92,
+      102,
+      112,
+      122,
+      132
+    ]
+  },
+  "transfer": "HLG / BT.2020; linear conversion npl=100; Mobius tone map desat=0; BT.709 display export",
+  "appearance_source": "Authored colors/labels and CAD. No video pixels used in robot textures."
+}

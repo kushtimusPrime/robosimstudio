@@ -1,0 +1,44 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "name": "builds",
+   "ok": true,
+   "detail": "the last rebuild landed"
+  },
+  {
+   "name": "finite",
+   "ok": true,
+   "detail": "every number in the state is finite"
+  },
+  {
+   "name": "camera",
+   "ok": true,
+   "detail": "endoscope 960x540, fov 45 deg"
+  },
+  {
+   "name": "objects",
+   "ok": null,
+   "detail": "no names given (--object or --key), so nothing was looked for; the scene has 2 things"
+  },
+  {
+   "name": "penetration",
+   "ok": true,
+   "detail": "worst overlap 0.00 mm (bar 1 mm)"
+  },
+  {
+   "name": "rest",
+   "ok": true,
+   "detail": "nothing moved more than 0.00 mm in 60 steps (bar 2 mm); not measured (no position to read): endoscope"
+  },
+  {
+   "name": "finite_after",
+   "ok": true,
+   "detail": "still finite after 60 steps"
+  }
+ ],
+ "report": "PASS  builds       the last rebuild landed\nPASS  finite       every number in the state is finite\nPASS  camera       endoscope 960x540, fov 45 deg\nSKIP  objects      no names given (--object or --key), so nothing was looked for; the scene has 2 things\nPASS  penetration  worst overlap 0.00 mm (bar 1 mm)\nPASS  rest         nothing moved more than 0.00 mm in 60 steps (bar 2 mm); not measured (no position to read): endoscope\nPASS  finite_after still finite after 60 steps",
+ "drift_mm": {
+  "dvrk_dataset_profile": 0.0
+ }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "frame": 0,
+    "checked_jaw_mesh_instances": 10,
+    "step_count_unchanged": true,
+    "paused": true,
+    "max_browser_position_error_m": 0.0,
+    "max_browser_rotation_error_deg": 1.4917130464372052e-15,
+    "jaw_opening_deg": {
+      "PSM1": 5.0901947021484375,
+      "PSM2": 11.745099067687988
+    }
+  },
+  {
+    "frame": 94,
+    "checked_jaw_mesh_instances": 10,
+    "step_count_unchanged": true,
+    "paused": true,
+    "max_browser_position_error_m": 0.0,
+    "max_browser_rotation_error_deg": 0.0,
+    "jaw_opening_deg": {
+      "PSM1": 5.063602924346924,
+      "PSM2": 11.135021209716797
+    }
+  },
+  {
+    "frame": 188,
+    "checked_jaw_mesh_instances": 10,
+    "step_count_unchanged": true,
+    "paused": true,
+    "max_browser_position_error_m": 0.0,
+    "max_browser_rotation_error_deg": 0.0,
+    "jaw_opening_deg": {
+      "PSM1": 5.110065937042236,
+      "PSM2": -1.554694414138794
+    }
+  }
+]

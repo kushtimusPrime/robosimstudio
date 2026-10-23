@@ -1,0 +1,743 @@
+{
+  "selection": "Middle cached left frame per non-final-test episode; visual triage, not calibrated comparisons.",
+  "episodes": 122,
+  "setup_groups": 66,
+  "images": [
+    {
+      "episode": "tissue_10/1_needle_pickup/20250428-223900-225949",
+      "setup": "setup_000",
+      "frame": 130,
+      "image": "ref/dataset/tissue_10/1_needle_pickup/20250428-223900-225949/left_img_dir/frame000130_left.jpg"
+    },
+    {
+      "episode": "tissue_10/2_needle_throw/20250428-222529-428484",
+      "setup": "setup_000",
+      "frame": 296,
+      "image": "ref/dataset/tissue_10/2_needle_throw/20250428-222529-428484/left_img_dir/frame000296_left.jpg"
+    },
+    {
+      "episode": "tissue_3/1_needle_pickup_recovery/20250428-222059-987124_recovery",
+      "setup": "setup_000",
+      "frame": 152,
+      "image": "ref/dataset/tissue_3/1_needle_pickup_recovery/20250428-222059-987124_recovery/left_img_dir/frame000152_left.jpg"
+    },
+    {
+      "episode": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery",
+      "setup": "setup_000",
+      "frame": 287,
+      "image": "ref/dataset/tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/left_img_dir/frame000287_left.jpg"
+    },
+    {
+      "episode": "tissue_10/1_needle_pickup/20250430-100109-415297",
+      "setup": "setup_001",
+      "frame": 117,
+      "image": "ref/dataset/tissue_10/1_needle_pickup/20250430-100109-415297/left_img_dir/frame000117_left.jpg"
+    },
+    {
+      "episode": "tissue_10/2_needle_throw/20250430-100535-002019",
+      "setup": "setup_001",
+      "frame": 244,
+      "image": "ref/dataset/tissue_10/2_needle_throw/20250430-100535-002019/left_img_dir/frame000244_left.jpg"
+    },
+    {
+      "episode": "tissue_10/3_knot_tying/20250430-095612-306328",
+      "setup": "setup_001",
+      "frame": 130,
+      "image": "ref/dataset/tissue_10/3_knot_tying/20250430-095612-306328/left_img_dir/frame000130_left.jpg"
+    },
+    {
+      "episode": "tissue_5/1_needle_pickup/20250430-095521-804688",
+      "setup": "setup_001",
+      "frame": 140,
+      "image": "ref/dataset/tissue_5/1_needle_pickup/20250430-095521-804688/left_img_dir/frame000140_left.jpg"
+    },
+    {
+      "episode": "tissue_5/2_needle_throw/20250430-095308-815580",
+      "setup": "setup_001",
+      "frame": 312,
+      "image": "ref/dataset/tissue_5/2_needle_throw/20250430-095308-815580/left_img_dir/frame000312_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-095332-183267",
+      "setup": "setup_001",
+      "frame": 174,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-095332-183267/left_img_dir/frame000174_left.jpg"
+    },
+    {
+      "episode": "tissue_10/1_needle_pickup_recovery/20250506-100653-197394_recovery",
+      "setup": "setup_002",
+      "frame": 186,
+      "image": "ref/dataset/tissue_10/1_needle_pickup_recovery/20250506-100653-197394_recovery/left_img_dir/frame000186_left.jpg"
+    },
+    {
+      "episode": "tissue_10/2_needle_throw_recovery/20250506-103052-746280_recovery",
+      "setup": "setup_002",
+      "frame": 368,
+      "image": "ref/dataset/tissue_10/2_needle_throw_recovery/20250506-103052-746280_recovery/left_img_dir/frame000368_left.jpg"
+    },
+    {
+      "episode": "tissue_9/1_needle_pickup_recovery/20250506-100126-247980_recovery",
+      "setup": "setup_002",
+      "frame": 148,
+      "image": "ref/dataset/tissue_9/1_needle_pickup_recovery/20250506-100126-247980_recovery/left_img_dir/frame000148_left.jpg"
+    },
+    {
+      "episode": "tissue_9/2_needle_throw_recovery/20250506-100142-221421_recovery",
+      "setup": "setup_002",
+      "frame": 327,
+      "image": "ref/dataset/tissue_9/2_needle_throw_recovery/20250506-100142-221421_recovery/left_img_dir/frame000327_left.jpg"
+    },
+    {
+      "episode": "tissue_9/3_knot_tying/20250506-102416-316554",
+      "setup": "setup_002",
+      "frame": 161,
+      "image": "ref/dataset/tissue_9/3_knot_tying/20250506-102416-316554/left_img_dir/frame000161_left.jpg"
+    },
+    {
+      "episode": "tissue_9/3_knot_tying_recovery/20250506-100216-443482_recovery",
+      "setup": "setup_002",
+      "frame": 144,
+      "image": "ref/dataset/tissue_9/3_knot_tying_recovery/20250506-100216-443482_recovery/left_img_dir/frame000144_left.jpg"
+    },
+    {
+      "episode": "tissue_10/1_needle_pickup_recovery/20250506-103918-422790_recovery",
+      "setup": "setup_003",
+      "frame": 97,
+      "image": "ref/dataset/tissue_10/1_needle_pickup_recovery/20250506-103918-422790_recovery/left_img_dir/frame000097_left.jpg"
+    },
+    {
+      "episode": "tissue_10/3_knot_tying_recovery/20250506-104004-079508_recovery",
+      "setup": "setup_003",
+      "frame": 190,
+      "image": "ref/dataset/tissue_10/3_knot_tying_recovery/20250506-104004-079508_recovery/left_img_dir/frame000190_left.jpg"
+    },
+    {
+      "episode": "tissue_10/2_needle_throw_recovery/20250505-222705-600960_recovery",
+      "setup": "setup_004",
+      "frame": 316,
+      "image": "ref/dataset/tissue_10/2_needle_throw_recovery/20250505-222705-600960_recovery/left_img_dir/frame000316_left.jpg"
+    },
+    {
+      "episode": "tissue_10/3_knot_tying_recovery/20250505-222525-618444_recovery",
+      "setup": "setup_004",
+      "frame": 112,
+      "image": "ref/dataset/tissue_10/3_knot_tying_recovery/20250505-222525-618444_recovery/left_img_dir/frame000112_left.jpg"
+    },
+    {
+      "episode": "tissue_8/1_needle_pickup_recovery/20250505-220726-046399_recovery",
+      "setup": "setup_004",
+      "frame": 140,
+      "image": "ref/dataset/tissue_8/1_needle_pickup_recovery/20250505-220726-046399_recovery/left_img_dir/frame000140_left.jpg"
+    },
+    {
+      "episode": "tissue_8/2_needle_throw_recovery/20250505-220859-555095_recovery",
+      "setup": "setup_004",
+      "frame": 311,
+      "image": "ref/dataset/tissue_8/2_needle_throw_recovery/20250505-220859-555095_recovery/left_img_dir/frame000311_left.jpg"
+    },
+    {
+      "episode": "tissue_8/3_knot_tying_recovery/20250505-220938-914608_recovery",
+      "setup": "setup_004",
+      "frame": 152,
+      "image": "ref/dataset/tissue_8/3_knot_tying_recovery/20250505-220938-914608_recovery/left_img_dir/frame000152_left.jpg"
+    },
+    {
+      "episode": "tissue_10/3_knot_tying/20250428-215115-615046",
+      "setup": "setup_005",
+      "frame": 156,
+      "image": "ref/dataset/tissue_10/3_knot_tying/20250428-215115-615046/left_img_dir/frame000156_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-120051-073008",
+      "setup": "setup_006",
+      "frame": 182,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-120051-073008/left_img_dir/frame000182_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/Needle_Pickup_03",
+      "setup": "setup_007",
+      "frame": 162,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/Needle_Pickup_03/left_img_dir/frame000162_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup_recovery/20250123-102116-713289_recovery",
+      "setup": "setup_008",
+      "frame": 220,
+      "image": "ref/dataset/tissue_1/1_needle_pickup_recovery/20250123-102116-713289_recovery/left_img_dir/frame000220_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup_recovery/20250123-121033-328960_recovery",
+      "setup": "setup_009",
+      "frame": 198,
+      "image": "ref/dataset/tissue_1/1_needle_pickup_recovery/20250123-121033-328960_recovery/left_img_dir/frame000198_left.jpg"
+    },
+    {
+      "episode": "tissue_2/1_needle_pickup/20250424-111109-544182",
+      "setup": "setup_010",
+      "frame": 152,
+      "image": "ref/dataset/tissue_2/1_needle_pickup/20250424-111109-544182/left_img_dir/frame000152_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-112327-230754",
+      "setup": "setup_010",
+      "frame": 352,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-112327-230754/left_img_dir/frame000352_left.jpg"
+    },
+    {
+      "episode": "tissue_2/1_needle_pickup/20250424-204649-387583",
+      "setup": "setup_011",
+      "frame": 161,
+      "image": "ref/dataset/tissue_2/1_needle_pickup/20250424-204649-387583/left_img_dir/frame000161_left.jpg"
+    },
+    {
+      "episode": "tissue_2/1_needle_pickup_recovery/20250424-135420-150083_recovery",
+      "setup": "setup_012",
+      "frame": 130,
+      "image": "ref/dataset/tissue_2/1_needle_pickup_recovery/20250424-135420-150083_recovery/left_img_dir/frame000130_left.jpg"
+    },
+    {
+      "episode": "tissue_2/1_needle_pickup_recovery/20250424-225116-547083_recovery",
+      "setup": "setup_013",
+      "frame": 140,
+      "image": "ref/dataset/tissue_2/1_needle_pickup_recovery/20250424-225116-547083_recovery/left_img_dir/frame000140_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-225250-610134",
+      "setup": "setup_013",
+      "frame": 136,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-225250-610134/left_img_dir/frame000136_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying_recovery/20250424-223611-564366_recovery",
+      "setup": "setup_013",
+      "frame": 117,
+      "image": "ref/dataset/tissue_2/3_knot_tying_recovery/20250424-223611-564366_recovery/left_img_dir/frame000117_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying_recovery/20250424-124519-349680_recovery",
+      "setup": "setup_014",
+      "frame": 206,
+      "image": "ref/dataset/tissue_2/3_knot_tying_recovery/20250424-124519-349680_recovery/left_img_dir/frame000206_left.jpg"
+    },
+    {
+      "episode": "tissue_3/1_needle_pickup/20250428-212948-363375",
+      "setup": "setup_015",
+      "frame": 122,
+      "image": "ref/dataset/tissue_3/1_needle_pickup/20250428-212948-363375/left_img_dir/frame000122_left.jpg"
+    },
+    {
+      "episode": "tissue_3/2_needle_throw/20250428-212958-618853",
+      "setup": "setup_015",
+      "frame": 334,
+      "image": "ref/dataset/tissue_3/2_needle_throw/20250428-212958-618853/left_img_dir/frame000334_left.jpg"
+    },
+    {
+      "episode": "tissue_3/3_knot_tying/20250428-213136-462312",
+      "setup": "setup_015",
+      "frame": 129,
+      "image": "ref/dataset/tissue_3/3_knot_tying/20250428-213136-462312/left_img_dir/frame000129_left.jpg"
+    },
+    {
+      "episode": "tissue_3/3_knot_tying_recovery/20250428-213756-755410_recovery",
+      "setup": "setup_015",
+      "frame": 142,
+      "image": "ref/dataset/tissue_3/3_knot_tying_recovery/20250428-213756-755410_recovery/left_img_dir/frame000142_left.jpg"
+    },
+    {
+      "episode": "tissue_3/1_needle_pickup/20250428-231727-673727",
+      "setup": "setup_016",
+      "frame": 120,
+      "image": "ref/dataset/tissue_3/1_needle_pickup/20250428-231727-673727/left_img_dir/frame000120_left.jpg"
+    },
+    {
+      "episode": "tissue_3/1_needle_pickup_recovery/20250428-231035-152520_recovery",
+      "setup": "setup_016",
+      "frame": 174,
+      "image": "ref/dataset/tissue_3/1_needle_pickup_recovery/20250428-231035-152520_recovery/left_img_dir/frame000174_left.jpg"
+    },
+    {
+      "episode": "tissue_3/2_needle_throw/20250428-231738-917996",
+      "setup": "setup_016",
+      "frame": 256,
+      "image": "ref/dataset/tissue_3/2_needle_throw/20250428-231738-917996/left_img_dir/frame000256_left.jpg"
+    },
+    {
+      "episode": "tissue_3/2_needle_throw_recovery/20250428-231108-638695_recovery",
+      "setup": "setup_016",
+      "frame": 282,
+      "image": "ref/dataset/tissue_3/2_needle_throw_recovery/20250428-231108-638695_recovery/left_img_dir/frame000282_left.jpg"
+    },
+    {
+      "episode": "tissue_3/3_knot_tying/20250428-231833-222365",
+      "setup": "setup_016",
+      "frame": 134,
+      "image": "ref/dataset/tissue_3/3_knot_tying/20250428-231833-222365/left_img_dir/frame000134_left.jpg"
+    },
+    {
+      "episode": "tissue_3/3_knot_tying_recovery/20250428-231624-469357_recovery",
+      "setup": "setup_016",
+      "frame": 86,
+      "image": "ref/dataset/tissue_3/3_knot_tying_recovery/20250428-231624-469357_recovery/left_img_dir/frame000086_left.jpg"
+    },
+    {
+      "episode": "tissue_4/1_needle_pickup/20250429-205351-383498",
+      "setup": "setup_017",
+      "frame": 150,
+      "image": "ref/dataset/tissue_4/1_needle_pickup/20250429-205351-383498/left_img_dir/frame000150_left.jpg"
+    },
+    {
+      "episode": "tissue_4/2_needle_throw/20250429-205402-595720",
+      "setup": "setup_017",
+      "frame": 282,
+      "image": "ref/dataset/tissue_4/2_needle_throw/20250429-205402-595720/left_img_dir/frame000282_left.jpg"
+    },
+    {
+      "episode": "tissue_4/3_knot_tying/20250429-205423-555549",
+      "setup": "setup_017",
+      "frame": 125,
+      "image": "ref/dataset/tissue_4/3_knot_tying/20250429-205423-555549/left_img_dir/frame000125_left.jpg"
+    },
+    {
+      "episode": "tissue_4/3_knot_tying_recovery/20250429-205858-240968_recovery",
+      "setup": "setup_017",
+      "frame": 96,
+      "image": "ref/dataset/tissue_4/3_knot_tying_recovery/20250429-205858-240968_recovery/left_img_dir/frame000096_left.jpg"
+    },
+    {
+      "episode": "tissue_4/1_needle_pickup/20250429-224802-245546",
+      "setup": "setup_018",
+      "frame": 122,
+      "image": "ref/dataset/tissue_4/1_needle_pickup/20250429-224802-245546/left_img_dir/frame000122_left.jpg"
+    },
+    {
+      "episode": "tissue_4/2_needle_throw/20250429-224811-566223",
+      "setup": "setup_018",
+      "frame": 252,
+      "image": "ref/dataset/tissue_4/2_needle_throw/20250429-224811-566223/left_img_dir/frame000252_left.jpg"
+    },
+    {
+      "episode": "tissue_4/3_knot_tying/20250429-224902-678625",
+      "setup": "setup_018",
+      "frame": 110,
+      "image": "ref/dataset/tissue_4/3_knot_tying/20250429-224902-678625/left_img_dir/frame000110_left.jpg"
+    },
+    {
+      "episode": "tissue_4/3_knot_tying_recovery/20250429-211707-897908_recovery",
+      "setup": "setup_019",
+      "frame": 79,
+      "image": "ref/dataset/tissue_4/3_knot_tying_recovery/20250429-211707-897908_recovery/left_img_dir/frame000079_left.jpg"
+    },
+    {
+      "episode": "tissue_5/1_needle_pickup/20250430-230147-851566",
+      "setup": "setup_020",
+      "frame": 166,
+      "image": "ref/dataset/tissue_5/1_needle_pickup/20250430-230147-851566/left_img_dir/frame000166_left.jpg"
+    },
+    {
+      "episode": "tissue_5/2_needle_throw/20250430-230200-398024",
+      "setup": "setup_020",
+      "frame": 262,
+      "image": "ref/dataset/tissue_5/2_needle_throw/20250430-230200-398024/left_img_dir/frame000262_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-230258-029248",
+      "setup": "setup_020",
+      "frame": 126,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-230258-029248/left_img_dir/frame000126_left.jpg"
+    },
+    {
+      "episode": "tissue_5/2_needle_throw_recovery/20250430-102736-141214_recovery",
+      "setup": "setup_021",
+      "frame": 196,
+      "image": "ref/dataset/tissue_5/2_needle_throw_recovery/20250430-102736-141214_recovery/left_img_dir/frame000196_left.jpg"
+    },
+    {
+      "episode": "tissue_5/2_needle_throw_recovery/20250430-215906-689779_recovery",
+      "setup": "setup_022",
+      "frame": 212,
+      "image": "ref/dataset/tissue_5/2_needle_throw_recovery/20250430-215906-689779_recovery/left_img_dir/frame000212_left.jpg"
+    },
+    {
+      "episode": "tissue_6/1_needle_pickup/20250501-194210-613199",
+      "setup": "setup_023",
+      "frame": 138,
+      "image": "ref/dataset/tissue_6/1_needle_pickup/20250501-194210-613199/left_img_dir/frame000138_left.jpg"
+    },
+    {
+      "episode": "tissue_6/1_needle_pickup_recovery/20250501-194822-545179_recovery",
+      "setup": "setup_023",
+      "frame": 152,
+      "image": "ref/dataset/tissue_6/1_needle_pickup_recovery/20250501-194822-545179_recovery/left_img_dir/frame000152_left.jpg"
+    },
+    {
+      "episode": "tissue_6/2_needle_throw_recovery/20250501-194908-213836_recovery",
+      "setup": "setup_023",
+      "frame": 192,
+      "image": "ref/dataset/tissue_6/2_needle_throw_recovery/20250501-194908-213836_recovery/left_img_dir/frame000192_left.jpg"
+    },
+    {
+      "episode": "tissue_6/3_knot_tying/20250501-194242-275564",
+      "setup": "setup_023",
+      "frame": 136,
+      "image": "ref/dataset/tissue_6/3_knot_tying/20250501-194242-275564/left_img_dir/frame000136_left.jpg"
+    },
+    {
+      "episode": "tissue_6/3_knot_tying_recovery/20250501-194929-670497_recovery",
+      "setup": "setup_023",
+      "frame": 196,
+      "image": "ref/dataset/tissue_6/3_knot_tying_recovery/20250501-194929-670497_recovery/left_img_dir/frame000196_left.jpg"
+    },
+    {
+      "episode": "tissue_6/1_needle_pickup/20250501-230433-797520",
+      "setup": "setup_024",
+      "frame": 128,
+      "image": "ref/dataset/tissue_6/1_needle_pickup/20250501-230433-797520/left_img_dir/frame000128_left.jpg"
+    },
+    {
+      "episode": "tissue_6/1_needle_pickup_recovery/20250501-220147-930483_recovery",
+      "setup": "setup_024",
+      "frame": 146,
+      "image": "ref/dataset/tissue_6/1_needle_pickup_recovery/20250501-220147-930483_recovery/left_img_dir/frame000146_left.jpg"
+    },
+    {
+      "episode": "tissue_6/2_needle_throw/20250501-230443-645481",
+      "setup": "setup_024",
+      "frame": 253,
+      "image": "ref/dataset/tissue_6/2_needle_throw/20250501-230443-645481/left_img_dir/frame000253_left.jpg"
+    },
+    {
+      "episode": "tissue_6/2_needle_throw_recovery/20250501-220233-818038_recovery",
+      "setup": "setup_024",
+      "frame": 258,
+      "image": "ref/dataset/tissue_6/2_needle_throw_recovery/20250501-220233-818038_recovery/left_img_dir/frame000258_left.jpg"
+    },
+    {
+      "episode": "tissue_6/3_knot_tying/20250501-230538-648005",
+      "setup": "setup_024",
+      "frame": 135,
+      "image": "ref/dataset/tissue_6/3_knot_tying/20250501-230538-648005/left_img_dir/frame000135_left.jpg"
+    },
+    {
+      "episode": "tissue_6/3_knot_tying_recovery/20250501-221208-379246_recovery",
+      "setup": "setup_024",
+      "frame": 132,
+      "image": "ref/dataset/tissue_6/3_knot_tying_recovery/20250501-221208-379246_recovery/left_img_dir/frame000132_left.jpg"
+    },
+    {
+      "episode": "tissue_7/1_needle_pickup/20250502-195939-575324",
+      "setup": "setup_025",
+      "frame": 176,
+      "image": "ref/dataset/tissue_7/1_needle_pickup/20250502-195939-575324/left_img_dir/frame000176_left.jpg"
+    },
+    {
+      "episode": "tissue_7/1_needle_pickup_recovery/20250502-200538-836752_recovery",
+      "setup": "setup_025",
+      "frame": 162,
+      "image": "ref/dataset/tissue_7/1_needle_pickup_recovery/20250502-200538-836752_recovery/left_img_dir/frame000162_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying/20250502-200023-995541",
+      "setup": "setup_025",
+      "frame": 184,
+      "image": "ref/dataset/tissue_7/3_knot_tying/20250502-200023-995541/left_img_dir/frame000184_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying_recovery/20250502-200354-491198_recovery",
+      "setup": "setup_025",
+      "frame": 212,
+      "image": "ref/dataset/tissue_7/3_knot_tying_recovery/20250502-200354-491198_recovery/left_img_dir/frame000212_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying_recovery/20250502-204132-813971_recovery",
+      "setup": "setup_025",
+      "frame": 198,
+      "image": "ref/dataset/tissue_7/3_knot_tying_recovery/20250502-204132-813971_recovery/left_img_dir/frame000198_left.jpg"
+    },
+    {
+      "episode": "tissue_7/1_needle_pickup/20250502-234810-376913",
+      "setup": "setup_026",
+      "frame": 131,
+      "image": "ref/dataset/tissue_7/1_needle_pickup/20250502-234810-376913/left_img_dir/frame000131_left.jpg"
+    },
+    {
+      "episode": "tissue_7/2_needle_throw/20250502-234820-747852",
+      "setup": "setup_026",
+      "frame": 252,
+      "image": "ref/dataset/tissue_7/2_needle_throw/20250502-234820-747852/left_img_dir/frame000252_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying/20250502-234838-743910",
+      "setup": "setup_026",
+      "frame": 144,
+      "image": "ref/dataset/tissue_7/3_knot_tying/20250502-234838-743910/left_img_dir/frame000144_left.jpg"
+    },
+    {
+      "episode": "tissue_8/1_needle_pickup_recovery/20250505-232219-481525_recovery",
+      "setup": "setup_027",
+      "frame": 102,
+      "image": "ref/dataset/tissue_8/1_needle_pickup_recovery/20250505-232219-481525_recovery/left_img_dir/frame000102_left.jpg"
+    },
+    {
+      "episode": "tissue_8/2_needle_throw_recovery/20250505-232233-097162_recovery",
+      "setup": "setup_027",
+      "frame": 323,
+      "image": "ref/dataset/tissue_8/2_needle_throw_recovery/20250505-232233-097162_recovery/left_img_dir/frame000323_left.jpg"
+    },
+    {
+      "episode": "tissue_8/3_knot_tying/20250505-231744-255088",
+      "setup": "setup_027",
+      "frame": 170,
+      "image": "ref/dataset/tissue_8/3_knot_tying/20250505-231744-255088/left_img_dir/frame000170_left.jpg"
+    },
+    {
+      "episode": "tissue_8/3_knot_tying_recovery/20250505-232306-133753_recovery",
+      "setup": "setup_027",
+      "frame": 168,
+      "image": "ref/dataset/tissue_8/3_knot_tying_recovery/20250505-232306-133753_recovery/left_img_dir/frame000168_left.jpg"
+    },
+    {
+      "episode": "tissue_9/1_needle_pickup_recovery/20250506-154815-112311_recovery",
+      "setup": "setup_028",
+      "frame": 126,
+      "image": "ref/dataset/tissue_9/1_needle_pickup_recovery/20250506-154815-112311_recovery/left_img_dir/frame000126_left.jpg"
+    },
+    {
+      "episode": "tissue_9/2_needle_throw_recovery/20250506-154829-668547_recovery",
+      "setup": "setup_028",
+      "frame": 308,
+      "image": "ref/dataset/tissue_9/2_needle_throw_recovery/20250506-154829-668547_recovery/left_img_dir/frame000308_left.jpg"
+    },
+    {
+      "episode": "tissue_9/3_knot_tying_recovery/20250506-154858-280486_recovery",
+      "setup": "setup_028",
+      "frame": 82,
+      "image": "ref/dataset/tissue_9/3_knot_tying_recovery/20250506-154858-280486_recovery/left_img_dir/frame000082_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-122131-686065",
+      "setup": "setup_029",
+      "frame": 193,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-122131-686065/left_img_dir/frame000193_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-132221-722360",
+      "setup": "setup_030",
+      "frame": 260,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-132221-722360/left_img_dir/frame000260_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-132931-709668",
+      "setup": "setup_031",
+      "frame": 144,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-132931-709668/left_img_dir/frame000144_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-140001-849525",
+      "setup": "setup_032",
+      "frame": 150,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-140001-849525/left_img_dir/frame000150_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-141824-837737",
+      "setup": "setup_033",
+      "frame": 158,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-141824-837737/left_img_dir/frame000158_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-142719-470239",
+      "setup": "setup_034",
+      "frame": 178,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-142719-470239/left_img_dir/frame000178_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-144501-849866",
+      "setup": "setup_035",
+      "frame": 207,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-144501-849866/left_img_dir/frame000207_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-145012-177237",
+      "setup": "setup_036",
+      "frame": 202,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-145012-177237/left_img_dir/frame000202_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-151338-967148",
+      "setup": "setup_037",
+      "frame": 169,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-151338-967148/left_img_dir/frame000169_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250117-151648-894722",
+      "setup": "setup_038",
+      "frame": 158,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250117-151648-894722/left_img_dir/frame000158_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250118-144524-330045",
+      "setup": "setup_039",
+      "frame": 188,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250118-144524-330045/left_img_dir/frame000188_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250118-145740-411123",
+      "setup": "setup_040",
+      "frame": 118,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250118-145740-411123/left_img_dir/frame000118_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250118-150014-115897",
+      "setup": "setup_041",
+      "frame": 148,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250118-150014-115897/left_img_dir/frame000148_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250118-151829-108975",
+      "setup": "setup_042",
+      "frame": 169,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250118-151829-108975/left_img_dir/frame000169_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250118-160551-204935",
+      "setup": "setup_043",
+      "frame": 196,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250118-160551-204935/left_img_dir/frame000196_left.jpg"
+    },
+    {
+      "episode": "tissue_1/1_needle_pickup/20250118-162035-785187",
+      "setup": "setup_044",
+      "frame": 191,
+      "image": "ref/dataset/tissue_1/1_needle_pickup/20250118-162035-785187/left_img_dir/frame000191_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-114542-665295",
+      "setup": "setup_045",
+      "frame": 232,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-114542-665295/left_img_dir/frame000232_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-141923-445475",
+      "setup": "setup_046",
+      "frame": 305,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-141923-445475/left_img_dir/frame000305_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-150539-793570",
+      "setup": "setup_047",
+      "frame": 234,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-150539-793570/left_img_dir/frame000234_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-153317-345769",
+      "setup": "setup_048",
+      "frame": 302,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-153317-345769/left_img_dir/frame000302_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying_recovery/20250424-184255-136301_recovery",
+      "setup": "setup_049",
+      "frame": 236,
+      "image": "ref/dataset/tissue_2/3_knot_tying_recovery/20250424-184255-136301_recovery/left_img_dir/frame000236_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying_recovery/20250424-194232-587166_recovery",
+      "setup": "setup_050",
+      "frame": 288,
+      "image": "ref/dataset/tissue_2/3_knot_tying_recovery/20250424-194232-587166_recovery/left_img_dir/frame000288_left.jpg"
+    },
+    {
+      "episode": "tissue_2/3_knot_tying/20250424-215301-532248",
+      "setup": "setup_051",
+      "frame": 224,
+      "image": "ref/dataset/tissue_2/3_knot_tying/20250424-215301-532248/left_img_dir/frame000224_left.jpg"
+    },
+    {
+      "episode": "tissue_4/3_knot_tying/20250429-213555-789567",
+      "setup": "setup_052",
+      "frame": 190,
+      "image": "ref/dataset/tissue_4/3_knot_tying/20250429-213555-789567/left_img_dir/frame000190_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-105030-065582",
+      "setup": "setup_053",
+      "frame": 152,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-105030-065582/left_img_dir/frame000152_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-115202-080954",
+      "setup": "setup_054",
+      "frame": 208,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-115202-080954/left_img_dir/frame000208_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-123142-783704",
+      "setup": "setup_055",
+      "frame": 190,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-123142-783704/left_img_dir/frame000190_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-133353-066993",
+      "setup": "setup_056",
+      "frame": 185,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-133353-066993/left_img_dir/frame000185_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-153412-296303",
+      "setup": "setup_057",
+      "frame": 155,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-153412-296303/left_img_dir/frame000155_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-154538-252046",
+      "setup": "setup_058",
+      "frame": 190,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-154538-252046/left_img_dir/frame000190_left.jpg"
+    },
+    {
+      "episode": "tissue_5/3_knot_tying/20250430-224103-068076",
+      "setup": "setup_059",
+      "frame": 184,
+      "image": "ref/dataset/tissue_5/3_knot_tying/20250430-224103-068076/left_img_dir/frame000184_left.jpg"
+    },
+    {
+      "episode": "tissue_6/3_knot_tying_recovery/20250501-213459-801300_recovery",
+      "setup": "setup_060",
+      "frame": 186,
+      "image": "ref/dataset/tissue_6/3_knot_tying_recovery/20250501-213459-801300_recovery/left_img_dir/frame000186_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying/20250502-220352-541024",
+      "setup": "setup_061",
+      "frame": 224,
+      "image": "ref/dataset/tissue_7/3_knot_tying/20250502-220352-541024/left_img_dir/frame000224_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying/20250502-224222-684539",
+      "setup": "setup_062",
+      "frame": 248,
+      "image": "ref/dataset/tissue_7/3_knot_tying/20250502-224222-684539/left_img_dir/frame000248_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying/20250502-225559-784865",
+      "setup": "setup_063",
+      "frame": 199,
+      "image": "ref/dataset/tissue_7/3_knot_tying/20250502-225559-784865/left_img_dir/frame000199_left.jpg"
+    },
+    {
+      "episode": "tissue_7/3_knot_tying/20250502-232733-530857",
+      "setup": "setup_064",
+      "frame": 201,
+      "image": "ref/dataset/tissue_7/3_knot_tying/20250502-232733-530857/left_img_dir/frame000201_left.jpg"
+    },
+    {
+      "episode": "tissue_9/3_knot_tying_recovery/20250506-150422-537020_recovery",
+      "setup": "setup_065",
+      "frame": 196,
+      "image": "ref/dataset/tissue_9/3_knot_tying_recovery/20250506-150422-537020_recovery/left_img_dir/frame000196_left.jpg"
+    }
+  ],
+  "excluded_episodes": [
+    "tissue_6/2_needle_throw/20250501-194221-341946",
+    "tissue_7/2_needle_throw/20250502-195952-837967"
+  ]
+}

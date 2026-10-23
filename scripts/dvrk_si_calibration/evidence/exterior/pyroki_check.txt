@@ -1,0 +1,27 @@
+2026-10-23 13:59:22.761 | INFO     | jaxls._problem:analyze:237 - Building optimization problem with 5 terms and 1 variables: 4 costs, 0 eq_zero, 1 leq_zero, 0 geq_zero
+2026-10-23 13:59:22.773 | INFO     | jaxls._problem:analyze:356 - Vectorizing constraint group with 1 constraints (constraint_leq_zero), 1 variables each: augmented__limits
+2026-10-23 13:59:22.802 | INFO     | jaxls._problem:analyze:364 - Vectorizing group with 4 costs, 1 variables each: _pose_cost_analytical_jac
+2026-10-23 13:59:22.815 | INFO     | jaxls._problem:analyze:451 - Variable elimination: variable IDs are traced; solves will not use elimination
+exterior.urdf: 82 links, 25 actuated joints
+All four arms: locks exact; maximum position error 0.0001 mm
+Individual locks: locks exact; maximum position error 0.0002 mm
+Locked PSM3: locks exact; maximum position error 0.0002 mm
+
+PSM1 10 mm right and turned 20 deg about its jaws, PSM2 10 mm up  (14.4 ms a solve)
+  PSM1 solved    0.000 mm  0.000 deg from its target   joints moved 0.3079
+  PSM2 solved    0.000 mm  0.000 deg from its target   joints moved 0.3989
+  PSM3 locked    0.000 mm  0.000 deg from its target   joints moved 0.0000
+  ECM  locked    0.000 mm  0.000 deg from its target   joints moved 0.0000
+
+PSM2 locked: its target 20 mm away is ignored  (13.8 ms a solve)
+  PSM1 solved    0.000 mm  0.000 deg from its target   joints moved 0.3079
+  PSM2 locked   22.361 mm 20.000 deg from its target   joints moved 0.0000
+  PSM3 locked    0.000 mm  0.000 deg from its target   joints moved 0.0000
+  ECM  locked    0.000 mm  0.000 deg from its target   joints moved 0.0000
+
+Everything locked: nothing moves  (0.0 ms a solve)
+  PSM1 locked   10.000 mm  0.000 deg from its target   joints moved 0.0000
+  PSM2 locked   10.000 mm 20.000 deg from its target   joints moved 0.0000
+  PSM3 locked    0.000 mm  0.000 deg from its target   joints moved 0.0000
+  ECM  locked    0.000 mm  0.000 deg from its target   joints moved 0.0000
+Visual hierarchy matches PyRoKi FK for every link at three configurations.

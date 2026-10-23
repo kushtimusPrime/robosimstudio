@@ -15,6 +15,8 @@ from robosimstudio.core.render.scenery import register_scenery
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "assets/appearance"
+# Set False to reproduce the first approved appearance pass.
+REFINE_SURFACES = True
 # Display RGB, metalness, roughness. Surface hypotheses, not measured BRDFs.
 SURFACES = {
     "shell": ((0.69, 0.70, 0.72), 1.0, 0.27),
@@ -23,6 +25,10 @@ SURFACES = {
     "coating": ((0.065, 0.072, 0.082), 0.0, 0.28),
     "grip": ((0.53, 0.52, 0.49), 0.9, 0.42),
 }
+
+if REFINE_SURFACES:
+    SURFACES["shell"] = ((0.69, 0.70, 0.72), 1.0, 0.34)
+    SURFACES["collar"] = ((0.36, 0.37, 0.38), 1.0, 0.42)
 
 
 def materials():
@@ -33,7 +39,8 @@ def materials():
     # A 4 mm repeat, isotropic microvariation and fine machining striations.
     # This modulates roughness only; no photographed colour or illumination.
     _, x = np.mgrid[:256, :512]
-    grain = 0.015 * np.sin(2 * np.pi * x / 13) + rng.normal(0, 0.008, x.shape)
+    amplitude, noise = (0.03, 0.018) if REFINE_SURFACES else (0.015, 0.008)
+    grain = amplitude * np.sin(2 * np.pi * x / 13) + rng.normal(0, noise, x.shape)
     for name, (color, metal, rough) in SURFACES.items():
         base = OUT / f"{name}_albedo.png"
         Image.fromarray(np.full((2, 2, 3), np.rint(np.array(color) * 255), dtype=np.uint8)).save(base)
@@ -134,6 +141,8 @@ def visual_asset(source):
                 style = "shell"
                 if name.endswith("roll_link"):
                     style = "coating" if lo[2] < -0.1 else "mechanism"
+                    if REFINE_SURFACES and i == 0:
+                        style = "collar"
                 elif name.endswith("wrist_pitch_link"):
                     style = "shell" if i == 0 else "mechanism"
                 elif name.endswith("wrist_yaw_link"):
@@ -156,6 +165,18 @@ def visual_asset(source):
                     part.merge_vertices()
                     part = bevel_blade(part, -1 if name.endswith("1_link") else 1)
                     bevel_bounds = part.bounds.tolist()
+                if REFINE_SURFACES and style == "coating":
+                    # STL stores hard per-triangle normals on this circular shaft.
+                    # Smooth only its axial walls; keep end-cap normals and all
+                    # triangle surfaces unchanged. Do not smooth the wrist's edges.
+                    side_faces = np.abs(part.face_normals[:, 2]) < 1e-4
+                    wall = part.submesh([np.flatnonzero(side_faces)], append=True, repair=False)
+                    caps = part.submesh([np.flatnonzero(~side_faces)], append=True, repair=False)
+                    # The installed force-mesh loader drops OBJ normal records.
+                    # Shared wall vertices let it rebuild smooth normals, while
+                    # separate cap vertices retain the sharp end boundaries.
+                    wall.merge_vertices(merge_norm=True, merge_tex=True, digits_vertex=14)
+                    part = trimesh.util.concatenate([wall, caps])
                 filename = folder / f"{name}_{vi}_{style}.obj"
                 part.export(filename, digits=14, include_normals=True)
                 loaded = trimesh.load(filename, force="mesh", process=False)

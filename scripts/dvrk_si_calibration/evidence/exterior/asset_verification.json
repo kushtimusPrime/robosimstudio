@@ -1,0 +1,191 @@
+{
+  "source": "/mnt/2nd_drive/home/justin/robosimstudio/examples/live/twins/dvrk_si_validation/assets/appearance/03c545e4cd9b/appearance.urdf",
+  "physics_identical": true,
+  "protected_visual_links": [
+    "PSM1_roll_link",
+    "PSM1_wrist_pitch_link",
+    "PSM1_wrist_yaw_link",
+    "PSM1_jaw_1_link",
+    "PSM1_jaw_2_link",
+    "PSM2_roll_link",
+    "PSM2_wrist_pitch_link",
+    "PSM2_wrist_yaw_link",
+    "PSM2_jaw_1_link",
+    "PSM2_jaw_2_link",
+    "PSM3_roll_link",
+    "PSM3_wrist_pitch_link",
+    "PSM3_wrist_yaw_link",
+    "PSM3_jaw_1_link",
+    "PSM3_jaw_2_link"
+  ],
+  "changes": [
+    {
+      "link": "SUJ_cart",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM1_L0",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM1_L1",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM1_L2",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM1_L3",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM2_L0",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM2_L1",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM2_L2",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM2_L3",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM3_L0",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM3_L1",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM3_L2",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM3_L3",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_PSM3_L4",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_ECM_L0",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_ECM_L1",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_ECM_L2",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "SUJ_ECM_L3",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM1_base_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM1_yaw_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM1_pitch_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM1_pitch_2_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM1_pitch_3_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM1_housing_link",
+      "change": "restore welded CAD cover, drive discs and release tabs; tool-specific printed label"
+    },
+    {
+      "link": "PSM2_base_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM2_yaw_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM2_pitch_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM2_pitch_2_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM2_pitch_3_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM2_housing_link",
+      "change": "restore welded CAD cover, drive discs and release tabs; tool-specific printed label"
+    },
+    {
+      "link": "PSM3_base_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM3_yaw_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM3_pitch_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM3_pitch_2_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM3_pitch_3_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "PSM3_housing_link",
+      "change": "restore welded CAD cover, drive discs and release tabs; tool-specific printed label"
+    },
+    {
+      "link": "ECM_base_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "ECM_yaw_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "ECM_pitch_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "ECM_pitch_2_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "ECM_pitch_3_link",
+      "change": "satin cream finish, 1.2 mm clamped visual cover bevel; seated seams/fasteners where applicable"
+    },
+    {
+      "link": "ECM_endoscope_link",
+      "change": "proximal collar and cage rails; stainless shaft finish; head/lenses and all original geometry untouched"
+    }
+  ]
+}

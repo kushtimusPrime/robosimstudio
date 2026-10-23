@@ -1,0 +1,170 @@
+{
+  "rail_contact_cases": [
+    {
+      "arm": "PSM1",
+      "insertion": 0.0,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557163380662516e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.0,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557160258160229e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.0,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.55716122960539e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.145,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557163380662498e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.145,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.55716081327174e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.145,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557162339828399e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.29,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557164490885505e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.29,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557163588829298e-10
+    },
+    {
+      "arm": "PSM1",
+      "insertion": 0.29,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557163450051421e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.0,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557163519440512e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.0,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557158107103113e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.0,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557161021438571e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.145,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557162964328846e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.145,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557159217326142e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.145,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557161854105826e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.29,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557163796996119e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.29,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557159217326138e-10
+    },
+    {
+      "arm": "PSM2",
+      "insertion": 0.29,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557160188771284e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.0,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557162547995285e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.0,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.55715692749115e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.0,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557159980604473e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.145,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557161437772205e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.145,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557154707045105e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.145,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557162062272656e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.29,
+      "pitch": -1.2,
+      "max_rail_contact_distance_m": 8.557161437772191e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.29,
+      "pitch": 0.0,
+      "max_rail_contact_distance_m": 8.557161368383248e-10
+    },
+    {
+      "arm": "PSM3",
+      "insertion": 0.29,
+      "pitch": 1.2,
+      "max_rail_contact_distance_m": 8.557160952049621e-10
+    }
+  ],
+  "new_meshes_watertight_after_welding_normal_seams": true,
+  "rail_seating_overlap_m": 0.00031950000000000034,
+  "drive_face_seating_overlap_m": 0.0002610000000000008,
+  "assumptions": "Outline/cover dimensions estimated from scan, not mechanical metrology."
+}

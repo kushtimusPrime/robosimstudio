@@ -59,9 +59,13 @@ def replay(sim, session, profile, image_index=0, episode=None):
             session.live._drain_frustums(force=True)
             for frustum in session.live._frusta.values():
                 frustum.scale = 0.035
+        # Replay changes FK without advancing step_count. The paused Studio
+        # refresh otherwise keeps its old mesh transforms while handles and
+        # endoscope renders already use the new pose.
+        session.draw()
 
 
-def build(profile_name, appearance=False):
+def build(profile_name, appearance=False, exterior=False):
     profile = json.load(open(ROOT / "assets/multisession" / profile_name / "profile.json"))
     asset = str(ROOT / profile["asset"])
     look = VOID
@@ -70,6 +74,10 @@ def build(profile_name, appearance=False):
 
         asset = visual_asset(asset)
         look = render_look()
+    if exterior:
+        from exterior import visual_asset as exterior_asset
+
+        asset = exterior_asset(asset)
     arms = []
     for arm in DVRK_SI.arms:
         gripper = arm.gripper

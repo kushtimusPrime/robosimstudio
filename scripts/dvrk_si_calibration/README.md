@@ -61,6 +61,51 @@ identical image crops. This is an appearance improvement, not a new calibration
 or a full exterior reconstruction. Custom scope lighting is RTX-only; Viser
 shows the PBR surfaces under its own viewport lighting.
 
+The [wider appearance survey](template/APPEARANCE_SURVEY.md) reviews 122 cached
+episodes across 66 setup groups. Its [six-pose comparison](evidence/appearance_survey/review_overview.png)
+shows the first approved appearance alongside modest collar/housing/shading
+refinements. `REFINE_SURFACES = False` in `appearance.py` retains the first recipe.
+
+## Optional exterior from the user scans
+
+Set `EXTERIOR = True` to restore the complete instrument housings with pale-blue
+polymer and tool-specific labels, add satin cover finishes and small visual
+bevels, and detail the scope mounting cage. Keep `APPEARANCE = True` for the
+previously approved endoscope-visible tools. Both layers can be disabled
+independently; canonical meshes, physics, frames and calibration stay unchanged.
+
+See [the exterior recipe and limitations](template/EXTERIOR.md),
+[instrument housing comparison](evidence/exterior/tool_comparison.png),
+[scope collar comparison](evidence/exterior/scope_comparison.png),
+[robot covers](evidence/exterior/arm_comparison.png), and
+[calibrated endoscope regression views](evidence/exterior/endoscope_preservation.png).
+The page has dedicated free-view buttons for the exterior, each housing and the
+scope collar. The 3.3 MB source assets are bundled; normal builds do not require
+Blender or the original MOV files.
+
+## PyRoKi with the upgraded visuals
+
+From a restored twin with its setup assets and CSVs available:
+
+```bash
+uv run --no-sync python pyroki_preview.py --port 8091
+uv run --no-sync python pyroki_preview.py --check
+```
+
+This separate Viser page imports the existing `scripts/dvrk_si_pyroki_ik.py`
+solver unchanged and loads the same optional appearance/exterior asset as
+Studio, including labels and sliding carriages. It starts at setup_017 frame
+94; use `--start middle` for working-arm joint midpoints, or `--setup` and
+`--frame` for another recorded configuration. PSM3 and ECM start locked.
+Each joint can be locked, fully locked arms are excluded from the pose costs,
+and jaws retain the selected recording's calibrated opening. Drag target arrows
+and rings; use **View → Tools** for a closer look and **Reset targets and joints**
+to return to the start. No collision avoidance is enabled. Viser lighting is
+not the RTX endoscope lighting. The standalone page does not simulate physics.
+
+Forward port 8091 when connecting over SSH. This page is independent of the
+existing live Studio on 8081 and the original canonical-URDF IK example.
+
 ## Calibration and limits
 
 The frozen candidate is `template/multisession_registration.json`. It fits shared

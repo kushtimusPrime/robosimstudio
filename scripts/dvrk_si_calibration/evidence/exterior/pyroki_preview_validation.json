@@ -1,0 +1,11 @@
+{
+  "solver": "existing scripts/dvrk_si_pyroki_ik.py, unchanged",
+  "profile": "setup_017",
+  "frame": 94,
+  "pbr_mesh_count": 162,
+  "non_visual_urdf_identical": true,
+  "locks_and_four_arm_reachable_target_checks": "passed",
+  "all_link_visual_vs_pyroki_fk_three_configurations": "passed, atol 1e-6",
+  "browser_visual_verification": "not completed: headless browsers on this host could not initialize WebGL reliably",
+  "port": 8091
+}

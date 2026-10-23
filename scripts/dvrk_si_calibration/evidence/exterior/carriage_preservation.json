@@ -1,0 +1,30 @@
+{
+  "protected_files_unchanged": 421,
+  "cases": [
+    {
+      "frame": 0,
+      "state_camera_physics_equal": true,
+      "tool_depth_equal": true,
+      "whole_image_changed_depth_pixels": 0
+    },
+    {
+      "frame": 94,
+      "state_camera_physics_equal": true,
+      "tool_depth_equal": true,
+      "whole_image_changed_depth_pixels": 0
+    },
+    {
+      "frame": 188,
+      "state_camera_physics_equal": true,
+      "tool_depth_equal": true,
+      "whole_image_changed_depth_pixels": 0
+    },
+    {
+      "setup": "setup_006",
+      "frame": 91,
+      "state_camera_physics_equal": true,
+      "tool_depth_equal": true,
+      "whole_image_changed_depth_pixels": 0
+    }
+  ]
+}

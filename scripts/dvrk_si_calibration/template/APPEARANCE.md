@@ -6,6 +6,13 @@ DeBakey forceps. It does not reconstruct the full exterior from endoscope images
 The canonical robot, calibrated profile assets, physics and calibration remain
 unchanged. PSM3 and the ECM visual meshes retain their original materials.
 
+A subsequent [wider survey](APPEARANCE_SURVEY.md) covers 122 cached episodes in
+66 setup groups. It adds a small, separately switchable surface refinement:
+duller existing collars, housing roughness .34 and smooth shaft-wall shading.
+Set `REFINE_SURFACES = False` in `appearance.py` to retain the first approved
+appearance recipe described below. The historical comparison images below are
+unchanged; the new review has its own evidence and verification.
+
 ## Use in the existing Studio page
 
 Set `APPEARANCE = True` in `scene.py`; its normal save/rebuild workflow loads the
