@@ -1,0 +1,10 @@
+{
+  "PSM1": {
+    "target_step_mm": 3.0,
+    "position_error_mm": 0.00018877135942447517
+  },
+  "PSM2": {
+    "target_step_mm": 3.0,
+    "position_error_mm": 0.0005453597940847341
+  }
+}

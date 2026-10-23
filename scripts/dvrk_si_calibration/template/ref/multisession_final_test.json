@@ -1,0 +1,200 @@
+{
+  "note": "Final two episodes selected and labeled after the ten-setup geometry and pinhole model were frozen. No optimization uses these pixels. Manual approximate centres; PSM1 screw omitted on reverse face in the middle frame.",
+  "frozen_fit_sha256": "ffaf2283e9776bcd63f82f15a6fc78a54a9800a44bff8dfe102ba0fbbdeb0347",
+  "episodes": [
+    {
+      "id": "tissue_6/2_needle_throw/20250501-194221-341946",
+      "session": "setup_023",
+      "role": "test",
+      "frames": {
+        "0": {
+          "split": "test_episode",
+          "PSM1": [
+            [
+              718,
+              320
+            ],
+            [
+              544,
+              290
+            ],
+            [
+              540,
+              328
+            ]
+          ],
+          "PSM2": [
+            [
+              154,
+              300
+            ],
+            [
+              378,
+              276
+            ],
+            [
+              378,
+              342
+            ]
+          ]
+        },
+        "290": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              467,
+              109
+            ],
+            [
+              474,
+              132
+            ]
+          ],
+          "PSM2": [
+            [
+              174,
+              314
+            ],
+            [
+              391,
+              300
+            ],
+            [
+              392,
+              348
+            ]
+          ]
+        },
+        "579": {
+          "split": "test_episode",
+          "PSM1": [
+            [
+              760,
+              296
+            ],
+            [
+              562,
+              296
+            ],
+            [
+              564,
+              336
+            ]
+          ],
+          "PSM2": [
+            [
+              188,
+              296
+            ],
+            [
+              392,
+              277
+            ],
+            [
+              391,
+              333
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "tissue_7/2_needle_throw/20250502-195952-837967",
+      "session": "setup_025",
+      "role": "test",
+      "frames": {
+        "0": {
+          "split": "test_episode",
+          "PSM1": [
+            [
+              774,
+              312
+            ],
+            [
+              591,
+              276
+            ],
+            [
+              585,
+              307
+            ]
+          ],
+          "PSM2": [
+            [
+              165,
+              296
+            ],
+            [
+              398,
+              282
+            ],
+            [
+              398,
+              337
+            ]
+          ]
+        },
+        "298": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              441,
+              350
+            ],
+            [
+              439,
+              376
+            ]
+          ],
+          "PSM2": [
+            [
+              143,
+              329
+            ],
+            [
+              366,
+              320
+            ],
+            [
+              365,
+              359
+            ]
+          ]
+        },
+        "595": {
+          "split": "test_episode",
+          "PSM1": [
+            [
+              832,
+              265
+            ],
+            [
+              624,
+              325
+            ],
+            [
+              635,
+              363
+            ]
+          ],
+          "PSM2": [
+            [
+              159,
+              311
+            ],
+            [
+              371,
+              300
+            ],
+            [
+              374,
+              333
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

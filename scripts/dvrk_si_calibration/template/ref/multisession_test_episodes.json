@@ -1,0 +1,187 @@
+{
+  "note": "Entire episodes excluded from fitting and model selection. Manual image-only blade ends and PSM2 screw centres. PSM1 screw omitted because its visible face differs while rolling; no tool projections consulted when selecting these points.",
+  "episodes": [
+    {
+      "id": "tissue_3/2_needle_throw/20250428-212958-618853",
+      "session": "setup_015",
+      "role": "test",
+      "frames": {
+        "0": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              616,
+              272
+            ],
+            [
+              616,
+              308
+            ]
+          ],
+          "PSM2": [
+            [
+              102,
+              278
+            ],
+            [
+              410,
+              260
+            ],
+            [
+              408,
+              350
+            ]
+          ]
+        },
+        "334": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              464,
+              284
+            ],
+            [
+              464,
+              320
+            ]
+          ],
+          "PSM2": [
+            [
+              98,
+              280
+            ],
+            [
+              392,
+              268
+            ],
+            [
+              392,
+              344
+            ]
+          ]
+        },
+        "667": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              606,
+              306
+            ],
+            [
+              606,
+              342
+            ]
+          ],
+          "PSM2": [
+            [
+              98,
+              290
+            ],
+            [
+              396,
+              270
+            ],
+            [
+              396,
+              348
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "tissue_4/2_needle_throw/20250429-205402-595720",
+      "session": "setup_017",
+      "role": "test",
+      "frames": {
+        "0": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              604,
+              272
+            ],
+            [
+              598,
+              304
+            ]
+          ],
+          "PSM2": [
+            [
+              84,
+              276
+            ],
+            [
+              386,
+              264
+            ],
+            [
+              380,
+              330
+            ]
+          ]
+        },
+        "282": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              428,
+              272
+            ],
+            [
+              428,
+              298
+            ]
+          ],
+          "PSM2": [
+            [
+              70,
+              276
+            ],
+            [
+              380,
+              270
+            ],
+            [
+              376,
+              328
+            ]
+          ]
+        },
+        "563": {
+          "split": "test_episode",
+          "PSM1": [
+            null,
+            [
+              614,
+              286
+            ],
+            [
+              608,
+              328
+            ]
+          ],
+          "PSM2": [
+            [
+              74,
+              282
+            ],
+            [
+              384,
+              278
+            ],
+            [
+              380,
+              334
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

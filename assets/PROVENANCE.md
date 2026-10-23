@@ -236,3 +236,24 @@ set to the arm's wrist at the arm's `ArmSpec.gripper_mount`, and
 `after_scene_built` adds one disabled MuJoCo weld row from `suction_pad` to
 each part with a flat face; `robosimstudio.core.suction` switches them.
 Nothing on disk changes.
+
+## `embodiments/dvrk_si/` — dVRK Si patient cart, set up as SutureBot's rig
+
+**Source:** JHU's [`jhu-dvrk/dvrk_model`](https://github.com/jhu-dvrk/dvrk_model)
+(MIT, `LICENSE` beside the URDF) at `90472a93`: the Si cart, setup joints, three
+PSMs with EndoWrist instruments and the ECM, expanded from `urdf/Si/` into one
+tree. *Generated* by `scripts/dvrk_si_urdf.py`, which is in this repository and
+reproduces the checked-in `dvrk_si.urdf` byte for byte from that commit.
+
+**Changed:** controller joint coordinates and limits; frozen session-specific
+SUJs; exact-RCM parallelogram closure; shaft centred in the CAD cannula bore;
+proximal shaft trimmed to its 467 mm controller length; missing inertias and
+jaw colliders; decimated housing. `setups.json` contains attributed SutureBot
+source values (CC-BY-4.0), including tissue 7 row 372 for the default home.
+PSM2's missing DeBakey tip is a generated 12 mm straight-jaw approximation
+(Apache-2.0), with length from Intuitive Surgical's 2011 catalogue; it is not
+manufacturer CAD. The trimmed shaft remains MIT-derived geometry.
+
+The directory's `README.md` documents reproduction, measured replay accuracy,
+all geometry corrections and the unresolved optical-camera alignment.
+`tests/test_dvrk_si.py` checks recorded poses and full-range RCM/bore alignment.

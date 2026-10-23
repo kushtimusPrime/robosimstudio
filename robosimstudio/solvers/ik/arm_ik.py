@@ -226,6 +226,15 @@ class ArmIK:
         self.fk_host_reason = ""
         """Why the host chain walk is unavailable, or empty when it validated.
         Introspection, not control flow."""
+        self._mimics = self._mimic_table(model)
+        """``(follower, leader, offset, multiplier)`` per coordinate a mimic carries.
+
+        ``eval_fk`` reads ``joint_q`` as it stands and the *solver* enforces a
+        mimic, so a joint vector written here has its followers wherever the
+        template left them: on a dVRK PSM that freezes the parallelogram and
+        moves the tool 100 mm off where the arm would put it. Every pure FK
+        below writes the followers from their leaders first.
+        """
         self._chain_fk = self._build_chain_fk(home_state)
         self._fk_host_active = 0
         """Depth of open :meth:`host_fk` scopes. The walk runs only inside one."""
@@ -554,7 +563,7 @@ class ArmIK:
         both the speedup and the reason it is not simply the default.
         """
         if self._fk_host_active and self._chain_fk is not None:
-            return self._chain_fk.ee(joint_q)
+            return self._chain_fk.ee(self._follow(joint_q))
         return self._fk_ee_device(joint_q)
 
     @contextmanager
@@ -573,6 +582,29 @@ class ArmIK:
             yield
         finally:
             self._fk_host_active -= 1
+
+    @staticmethod
+    def _mimic_table(model: newton.Model) -> list[tuple[int, int, float, float]]:
+        mimic = getattr(model, "joint_mimic_joint", None)
+        if mimic is None or not model.joint_count:
+            return []
+        leaders = mimic.numpy()
+        coeffs = model.joint_mimic_coeffs.numpy()
+        q_start = model.joint_q_start.numpy()
+        return [
+            (int(q_start[j]), int(q_start[int(leader)]), float(coeffs[j][0]), float(coeffs[j][1]))
+            for j, leader in enumerate(leaders)
+            if int(leader) >= 0
+        ]
+
+    def _follow(self, joint_q: np.ndarray) -> np.ndarray:
+        """``joint_q`` with every mimic follower written from its leader."""
+        if not self._mimics:
+            return joint_q
+        q = np.array(joint_q, copy=True)
+        for follower, leader, offset, multiplier in self._mimics:
+            q[follower] = offset + multiplier * q[leader]
+        return q
 
     def _fk_ee_device(self, joint_q: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         """The device FK: full-model ``eval_fk`` plus a ``body_q`` readback."""
@@ -646,7 +678,7 @@ class ArmIK:
                 for c in self.arm_coords:
                     q[c] += rng.uniform(-1.0, 1.0)
             pos_dev, quat_dev = self._fk_ee_device(q.astype(np.float32))
-            pos_host, quat_host = walk.ee(q)
+            pos_host, quat_host = walk.ee(self._follow(q))
             pos_err = float(np.linalg.norm(pos_dev - pos_host))
             align = abs(float(np.dot(quat_dev, quat_host))) / max(
                 float(np.linalg.norm(quat_dev) * np.linalg.norm(quat_host)), 1e-12
@@ -676,7 +708,7 @@ class ArmIK:
         """Fill the scratch state with the FK of ``joint_q``."""
         if self._fk_state is None:
             self._fk_state = self.model.state()
-        q_wp = wp.array(np.asarray(joint_q, dtype=np.float32), dtype=wp.float32, device=self.model.device)
+        q_wp = wp.array(self._follow(np.asarray(joint_q, dtype=np.float32)), dtype=wp.float32, device=self.model.device)
         newton.eval_fk(self.model, q_wp, self._fk_state.joint_qd, self._fk_state)
 
     def solve_q(

@@ -1,0 +1,55 @@
+{
+  "profiles": [
+    {
+      "session": "setup_001",
+      "urdf_sha256": "5c83d812695bb13e90ae36ef95fe40f903fcede21e8114c07ab3dda4534bade3",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_002",
+      "urdf_sha256": "82a8597a9e6ccc33b7bc16119142d5dc566aff586926d70d2416c264252dc9e5",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_006",
+      "urdf_sha256": "65cb65a450536514a85cfa3a550849aed38c9d22cbcbaed8172be16cc0692019",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_010",
+      "urdf_sha256": "151c4361ec134951d616584c692b67b8b9092bef2940c3b2dde03af1bfcdf81c",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_015",
+      "urdf_sha256": "c1185a5e2049ef1af13a9136b15a3d414455eccce0cd62556cedf0ad04c0edd1",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_017",
+      "urdf_sha256": "e94db48641a2b622a4d08d4461b366e72f6520b2b88807934886a0bc83772bd5",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_020",
+      "urdf_sha256": "1f203ed1b1aed28cfd5795a3a7aff4fa7fa90ca8f7a27976a9e3beaef5f82386",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_023",
+      "urdf_sha256": "387a7c00a09f2f68ddfd9b280ccae041e062da77252f04f8e3c63b396215f280",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_025",
+      "urdf_sha256": "585ef909f5276760475f0013fa65a2bbd9ce5bd7ea9dd3fe67ad2722fd106285",
+      "matches_live_profile": true
+    },
+    {
+      "session": "setup_027",
+      "urdf_sha256": "47a891e8f086b610512d12cdde67e3719c49480ac68168fed8ccbe1b7b38299d",
+      "matches_live_profile": true
+    }
+  ],
+  "reference_data": "Existing cached CSVs; no generated profile assets copied into restored workspace."
+}

@@ -126,7 +126,7 @@ class IKSolverPyroki:
         )
         self._robot = pk.Robot.from_urdf(model)
         actuated = list(self._robot.joints.actuated_names)
-        wanted = list(joints) or actuated[: kinematics.dof]
+        wanted = list(joints) or self._own_joints(kinematics, actuated) or actuated[: kinematics.dof]
         if len(wanted) != kinematics.dof or any(name not in actuated for name in wanted):
             raise ValueError(
                 f"the URDF's actuated joints {actuated} do not cover this arm's {kinematics.dof} coordinates ({wanted})"
@@ -152,6 +152,26 @@ class IKSolverPyroki:
         self._t_ht = self._calibrate()
         self._t_ht_inv = np.linalg.inv(self._t_ht)
         self._solvers: dict[tuple[int, str], Any] = {}
+
+    @staticmethod
+    def _own_joints(kinematics: ArmKinematics, actuated: list[str]) -> list[str]:
+        """The arm's joints by the model's own labels, when the URDF names every one of them.
+
+        The URDF's *first* ``dof`` actuated joints are right for a URDF of one
+        arm and wrong for a robot whose URDF carries several: on the dVRK cart
+        that is PSM1's joints for every arm. The model's labels end in the
+        URDF's joint names whenever the model was imported from this URDF, so
+        they say which; a URDF transcribed under other names (``joint1`` for
+        ``left_joint1``) gets ``[]`` and the first-``dof`` rule.
+        """
+        arm = kinematics.arm
+        model = getattr(arm, "model", None)
+        if model is None:
+            return []
+        q_start = [int(v) for v in model.joint_q_start.numpy()]
+        by_coord = {q_start[j]: str(label).rsplit("/", 1)[-1] for j, label in enumerate(model.joint_label)}
+        names = [by_coord.get(int(c), "") for c in kinematics.arm_coords]
+        return names if all(name in actuated for name in names) else []
 
     # ------------------------------------------------------------- calibration
     def _root_from_motion(self) -> np.ndarray:

@@ -43,6 +43,33 @@ from robosimstudio.specs import ArmSpec, EmbodimentSpec, GripperSpec
 __all__ = ["ArmIndex", "EntityEmbodiment"]
 
 
+def _sync_mimic_positions(source, q, owned: set[int]) -> tuple[list[int], list[int]]:
+    """Initialize this robot's URDF followers before FK or a reset reads them."""
+
+    def host(name):
+        value = getattr(source, name, ())
+        return value.numpy() if hasattr(value, "numpy") else value
+
+    leaders = host("joint_mimic_joint")
+    starts, dofs, coeffs = host("joint_q_start"), host("joint_qd_start"), host("joint_mimic_coeffs")
+    pending = {i: int(leader) for i, leader in enumerate(leaders) if int(leader) >= 0}
+    coords, velocities = [], []
+    # Iterate so nested followers work even if their joints are not ordered.
+    while pending:
+        ready = [i for i, leader in pending.items() if int(starts[leader]) in owned]
+        if not ready:
+            break
+        for i in ready:
+            leader = pending.pop(i)
+            coord = int(starts[i])
+            offset, multiplier = coeffs[i]
+            q[coord] = float(offset) + float(multiplier) * q[int(starts[leader])]
+            owned.add(coord)
+            coords.append(coord)
+            velocities.append(int(dofs[i]))
+    return coords, velocities
+
+
 def _in_last_articulation(builder: newton.ModelBuilder, body: int) -> bool:
     """Whether ``body`` belongs to the articulation the builder added last.
 
@@ -1097,6 +1124,17 @@ class EntityEmbodiment(Entity):
             if arm.home_q:
                 for coord, value in zip(index.arm_coords, arm.home_q, strict=False):
                     builder.joint_q[coord] = float(value)
+            for coord, value in zip(index.gripper_coords, arm.home_gripper_q, strict=False):
+                builder.joint_q[coord] = float(value)
+        owned = {
+            c
+            for arm in self.spec.arms
+            for c in (
+                *self._index_arm_builder(builder, arm).arm_coords,
+                *self._index_arm_builder(builder, arm).gripper_coords,
+            )
+        }
+        _sync_mimic_positions(builder, builder.joint_q, owned)
         if unlimited_dofs:
             self._unlimit_ctrlrange(builder, unlimited_dofs)
 
@@ -1115,6 +1153,12 @@ class EntityEmbodiment(Entity):
         """
         followers = list(getattr(builder, "constraint_mimic_joint0", ()))
         leaders = list(getattr(builder, "constraint_mimic_joint1", ()))
+        # And the joints' own mimic table, which is where a URDF's <mimic> lands
+        # since Newton 1.7 rather than in the constraint table above.
+        for follower, leader in enumerate(getattr(builder, "joint_mimic_joint", ())):
+            if int(leader) >= 0:
+                followers.append(follower)
+                leaders.append(int(leader))
         starts = builder.joint_qd_start
         driven = {int(d) for d in dofs}
         # A joint's DOFs, by its position in joint_qd_start.
@@ -1304,9 +1348,14 @@ class EntityEmbodiment(Entity):
                 # the two coordinates measure exactly. Saying so keeps width()
                 # exact on a hand that cannot use the mirrored branch because
                 # only one of its joints may be driven.
+                # Only on a hand whose travel *is* the gap: two revolute jaws
+                # mirrored on one pivot are the same pair of coordinates, and
+                # their difference is an opening angle, not a width.
                 pair = (
                     (index.gripper_coords[0], index.gripper_follower_coords[0])
-                    if len(index.gripper_coords) == 1 and len(index.gripper_follower_coords) == 1
+                    if len(index.gripper_coords) == 1
+                    and len(index.gripper_follower_coords) == 1
+                    and (hand is None or hand.linear_travel)
                     else ()
                 )
                 self.grippers[arm.name] = Gripper(
@@ -1380,6 +1429,8 @@ class EntityEmbodiment(Entity):
             elif index.gripper_coords:
                 q[index.gripper_coords[0]] = index.gripper_open
                 q[index.gripper_coords[1]] = -index.gripper_open
+        owned = {c for index in self.arms.values() for c in (*index.arm_coords, *index.gripper_coords)}
+        _sync_mimic_positions(self.model, q, owned)
         return q
 
     def home_target_q(self) -> np.ndarray:
@@ -1438,6 +1489,8 @@ class EntityEmbodiment(Entity):
         home = self.home_joint_q()
         coords = [c for index in self.arms.values() for c in (*index.arm_coords, *index.gripper_coords)]
         coords += [c for index in self.arms.values() for c in index.gripper_follower_coords]
+        followers, follower_dofs = _sync_mimic_positions(self.model, home, set(coords))
+        coords += followers
         if not coords:
             return
         for state in (pipeline.state_0, pipeline.state_1):
@@ -1456,6 +1509,7 @@ class EntityEmbodiment(Entity):
             for index in self.arms.values():
                 for d in (*index.arm_dofs, *index.gripper_dofs, *index.gripper_follower_dofs):
                     qd[d] = 0.0
+            qd[follower_dofs] = 0.0
             state.joint_qd.assign(qd)
 
     def observe(self, state: newton.State) -> dict[str, np.ndarray]:
