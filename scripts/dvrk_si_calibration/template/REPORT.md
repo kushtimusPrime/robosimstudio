@@ -2,6 +2,13 @@
 
 ## What still differs from the reference
 
+The optional appearance pass is described in [APPEARANCE.md](APPEARANCE.md).
+It adds steel/coating PBR surfaces, fine procedural roughness, existing CAD detail,
+a 40 µm inward DeBakey visual bevel and scope-mounted RTX lighting. The six-frame
+real/baseline/updated sheet is `run/appearance/overview.png`. Jaw profiles remain
+approximate; highlights, tissue reflections and camera response still differ.
+The older descriptions of missing polished steel below describe the baseline.
+
 This is a reproducible **image-based calibration candidate**, not a factory
 calibration or a pixel-exact match. It fits shared left-endoscope intrinsics and
 shared jaw dimensions/mappings, with a separate rigid registration for each arm
@@ -38,6 +45,13 @@ The original single-session wrist-camera fits remain available with
 They have not been validated across this expanded dataset.
 
 ## Shortcuts and departures from the reference
+
+Appearance is opt-in (`APPEARANCE` in `scene.py`), generated separately under
+`assets/appearance/`. No camera/robot/tool frame, registration, timing, fitted jaw
+length, mapping, collision, mass or inertia changes. The 40 µm chamfer is an
+explicit visual assumption inside the original blade volume. Surface parameters,
+roughness grain and scope illumination are plausible, not measured. Viser uses
+its own lights; the paired scope emitters apply only to RTX endoscope renders.
 
 - This is **kinematic replay**, not contact-driven suturing. The replay writes
   recorded joints, propagates mimics, runs FK and pauses. There is no physical
@@ -82,6 +96,20 @@ They have not been validated across this expanded dataset.
   is preserved in `run/REPORT_single_session.md`.
 
 ## Checks and comparisons
+
+Appearance verification: six paired 960×540 renders (setup_017: 0/94/188 tuning,
+219 evaluation; setup_015: 32/161 evaluation), identical joint/body/camera/handle
+states and physics arrays, all 420 protected files unchanged. Projection change
+is 0.0 px over 453 landmarks in ten setups. Render-to-render silhouette IoU is
+99.64–99.93%, with no outward growth and at most 1.414 px inward edge retreat.
+`run/appearance/verification.json`, `projection_check.json` and
+`light_attachment_check.json` record checks; the close-up triptychs show both
+tools wherever visible. The two final-test episodes were excluded from appearance
+work. Studio gate passed builds, finite state, camera, zero reported overlap,
+zero cart drift over 60 steps and finite state afterward; object-presence checks
+were skipped without keys. This is not a physical manipulation test.
+`run/appearance/studio_check.json` records the gate. Repository Ruff check and
+format check passed (761 files). No broad library tiers apply to this live visual overlay.
 
 The dataset inventory contains **1,891 CSV episodes, 662,298 rows and 1,885 unique
 CSV checksums**. All CSVs were extracted with bounded HTTP Range requests; no
@@ -183,6 +211,11 @@ Two training-label mistakes were corrected after full-resolution image review;
 the original labels and review note are retained.
 
 ## Unsettled measurements and assumptions
+
+The appearance layer does not resolve blade width/thickness, DeBakey tooth count,
+neck shape, polymer chemistry, BRDF, wetness, real endoscope light/exposure or
+lens response. It leaves existing image registration residuals visible. The
+render-to-render silhouette score is not a real-image accuracy score.
 
 The selected pinhole camera is **fx=939.507, fy=930.059, cx=480, cy=270**, at
 960×540, with no distortion. Allowing principal-point and radial-distortion

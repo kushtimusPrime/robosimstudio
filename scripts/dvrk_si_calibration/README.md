@@ -44,6 +44,23 @@ Run it before selecting cached rendered comparisons in the image browser.
 The original working twin and historical single-session wrist-camera experiments
 are not needed by this bundle; its scope is the current ten-setup endoscope fit.
 
+## Optional instrument appearance
+
+The restored scene keeps the calibrated baseline by default. Set
+`APPEARANCE = True` in its `scene.py` to generate and load the separate PSM1/PSM2
+appearance layer; set it back to `False` to disable it. Materials, fine roughness,
+a small inward DeBakey visual bevel and scope lighting improve the visible tools
+without changing the calibrated model or physics.
+
+See [usage, assumptions and checks](template/APPEARANCE.md), the
+[six-frame real/baseline/updated overview](evidence/appearance/overview.png), and
+[setup_017 frame 94 at native resolution](evidence/appearance/comparison_setup_017_094.png).
+The [needle-driver close-up](evidence/appearance/closeup_setup_017_094_PSM1.png)
+and [DeBakey close-up](evidence/appearance/closeup_setup_017_094_PSM2.png) use
+identical image crops. This is an appearance improvement, not a new calibration
+or a full exterior reconstruction. Custom scope lighting is RTX-only; Viser
+shows the PBR surfaces under its own viewport lighting.
+
 ## Calibration and limits
 
 The frozen candidate is `template/multisession_registration.json`. It fits shared

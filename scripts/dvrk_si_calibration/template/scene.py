@@ -5,7 +5,8 @@ from dataset_browser import install
 from multisession_preview import build, replay
 
 ACTIVE_PROFILE = "setup_017"
-scene, sim, profile = build(ACTIVE_PROFILE)
+APPEARANCE = False  # Optional instrument materials, visual bevels and scope lighting.
+scene, sim, profile = build(ACTIVE_PROFILE, appearance=APPEARANCE)
 
 
 def show_frame(sim, session, image_index=0, episode=None):

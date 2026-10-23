@@ -1,0 +1,22 @@
+{
+  "source_sha256": "2b935597979516961f88a418c9e20a0cd7534ab6c80b762ee8d689925e8301ac",
+  "tuning_frames": {
+    "setup_017": [
+      0,
+      94,
+      188
+    ]
+  },
+  "evaluation_frames": {
+    "setup_017": [
+      219
+    ],
+    "setup_015": [
+      32,
+      161
+    ]
+  },
+  "final_test_episodes_used": false,
+  "delivered_source_sha256": "ce68ebc6b9bda19faef3aa67629f5209b400b19899599cb4dc4ba42c6de91761",
+  "post_freeze_changes": "Formatting, unused variable cleanup, stricter bounds assertion only; no material, geometry or lighting parameter changes. Final captures rerun with delivered generator."
+}

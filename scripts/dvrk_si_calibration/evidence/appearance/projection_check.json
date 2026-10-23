@@ -1,0 +1,8 @@
+{
+  "profiles": 10,
+  "observations": 151,
+  "landmarks": 453,
+  "appearance_projection_change_max_px": 0.0,
+  "urdf_vs_optimizer_max_px": 0.02897701019939128,
+  "urdf_vs_optimizer_rms_px": 0.004290562957662948
+}

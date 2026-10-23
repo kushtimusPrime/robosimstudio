@@ -61,9 +61,15 @@ def replay(sim, session, profile, image_index=0, episode=None):
                 frustum.scale = 0.035
 
 
-def build(profile_name):
+def build(profile_name, appearance=False):
     profile = json.load(open(ROOT / "assets/multisession" / profile_name / "profile.json"))
     asset = str(ROOT / profile["asset"])
+    look = VOID
+    if appearance:
+        from appearance import render_look, visual_asset
+
+        asset = visual_asset(asset)
+        look = render_look()
     arms = []
     for arm in DVRK_SI.arms:
         gripper = arm.gripper
@@ -87,7 +93,7 @@ def build(profile_name):
             cross_arm_collisions=False,
         )
     )
-    scene = rss.Scene(cell="void", name="dvrk_si_dataset_preview", physics=rss.MUJOCO_500HZ, render=VOID)
+    scene = rss.Scene(cell="void", name="dvrk_si_dataset_preview", physics=rss.MUJOCO_500HZ, render=look)
     scene.add(rss.robot("dvrk_dataset_profile"))
     scene.add(
         rss.CameraSpec(

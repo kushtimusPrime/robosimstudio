@@ -1,0 +1,89 @@
+{
+  "frozen_source_files_unchanged": 420,
+  "cases": [
+    {
+      "setup": "setup_017",
+      "frame": 0,
+      "split": "tune",
+      "state_camera_physics_equal": true,
+      "tool_depth_cutoff_m": 0.2,
+      "silhouette_added_pixels": 0,
+      "silhouette_max_inward_px": 1.0,
+      "silhouette_iou": 0.9979046171943927,
+      "silhouette_changed_pixels": 171,
+      "common_pixels_depth_change_over_50um": 28,
+      "common_depth_p99_m": 7.450580596923828e-09,
+      "common_depth_max_m": 0.000588882714509964
+    },
+    {
+      "setup": "setup_017",
+      "frame": 94,
+      "split": "tune",
+      "state_camera_physics_equal": true,
+      "tool_depth_cutoff_m": 0.2,
+      "silhouette_added_pixels": 0,
+      "silhouette_max_inward_px": 1.0,
+      "silhouette_iou": 0.9993274577119485,
+      "silhouette_changed_pixels": 86,
+      "common_pixels_depth_change_over_50um": 6,
+      "common_depth_p99_m": 3.725290298461914e-09,
+      "common_depth_max_m": 6.083771586418152e-05
+    },
+    {
+      "setup": "setup_017",
+      "frame": 188,
+      "split": "tune",
+      "state_camera_physics_equal": true,
+      "tool_depth_cutoff_m": 0.2,
+      "silhouette_added_pixels": 0,
+      "silhouette_max_inward_px": 1.4142135623730951,
+      "silhouette_iou": 0.9992230522945571,
+      "silhouette_changed_pixels": 91,
+      "common_pixels_depth_change_over_50um": 4,
+      "common_depth_p99_m": 3.725290298461914e-09,
+      "common_depth_max_m": 7.239356637001038e-05
+    },
+    {
+      "setup": "setup_017",
+      "frame": 219,
+      "split": "evaluation",
+      "state_camera_physics_equal": true,
+      "tool_depth_cutoff_m": 0.2,
+      "silhouette_added_pixels": 0,
+      "silhouette_max_inward_px": 1.0,
+      "silhouette_iou": 0.9980612447802744,
+      "silhouette_changed_pixels": 78,
+      "common_pixels_depth_change_over_50um": 5,
+      "common_depth_p99_m": 7.450580596923828e-09,
+      "common_depth_max_m": 6.360933184623718e-05
+    },
+    {
+      "setup": "setup_015",
+      "frame": 32,
+      "split": "evaluation",
+      "state_camera_physics_equal": true,
+      "tool_depth_cutoff_m": 0.2,
+      "silhouette_added_pixels": 0,
+      "silhouette_max_inward_px": 1.4142135623730951,
+      "silhouette_iou": 0.9963985201191763,
+      "silhouette_changed_pixels": 220,
+      "common_pixels_depth_change_over_50um": 38,
+      "common_depth_p99_m": 1.1175870895385742e-08,
+      "common_depth_max_m": 0.0003546811640262604
+    },
+    {
+      "setup": "setup_015",
+      "frame": 161,
+      "split": "evaluation",
+      "state_camera_physics_equal": true,
+      "tool_depth_cutoff_m": 0.2,
+      "silhouette_added_pixels": 0,
+      "silhouette_max_inward_px": 1.0,
+      "silhouette_iou": 0.9993307502641775,
+      "silhouette_changed_pixels": 95,
+      "common_pixels_depth_change_over_50um": 5,
+      "common_depth_p99_m": 3.725290298461914e-09,
+      "common_depth_max_m": 6.393715739250183e-05
+    }
+  ]
+}

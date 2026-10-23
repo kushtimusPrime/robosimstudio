@@ -1,0 +1,123 @@
+[
+  {
+    "file": "closeup_setup_017_000_PSM1.png",
+    "crop_xyxy": [
+      513,
+      192,
+      960,
+      452
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_017_000_PSM2.png",
+    "crop_xyxy": [
+      0,
+      158,
+      494,
+      432
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_017_094_PSM1.png",
+    "crop_xyxy": [
+      467,
+      186,
+      840,
+      431
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_017_094_PSM2.png",
+    "crop_xyxy": [
+      229,
+      116,
+      653,
+      374
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_017_188_PSM1.png",
+    "crop_xyxy": [
+      488,
+      253,
+      865,
+      520
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_017_188_PSM2.png",
+    "crop_xyxy": [
+      202,
+      114,
+      598,
+      333
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_017_219_PSM2.png",
+    "crop_xyxy": [
+      37,
+      128,
+      451,
+      366
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_015_032_PSM1.png",
+    "crop_xyxy": [
+      578,
+      352,
+      960,
+      540
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 2
+  },
+  {
+    "file": "closeup_setup_015_032_PSM2.png",
+    "crop_xyxy": [
+      0,
+      67,
+      451,
+      360
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_015_161_PSM1.png",
+    "crop_xyxy": [
+      438,
+      254,
+      849,
+      516
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 3
+  },
+  {
+    "file": "closeup_setup_015_161_PSM2.png",
+    "crop_xyxy": [
+      317,
+      108,
+      714,
+      322
+    ],
+    "scale": 1,
+    "real_landmarks_visible": 2
+  }
+]
