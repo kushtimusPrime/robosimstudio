@@ -1,0 +1,1725 @@
+<robot name="dvrk_si">
+  <link name="world" />
+  <joint name="SUJ_fixed_cart" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+    <parent link="world" />
+    <child link="SUJ_cart" />
+  </joint>
+  <link name="SUJ_cart">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.80012" />
+      <mass value="71.07" />
+      <inertia ixx="16.038" ixy="-5.7683E-10" ixz="8.3859E-08" iyy="16.017" iyz="-1.008E-07" izz="0.56653" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/tower.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/tower.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="SUJ_PSM1_L0">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L0.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM1_J0" type="fixed">
+    <origin rpy="0 -0 1.57079633" xyz="0 0.228 0.579188377" />
+    <parent link="SUJ_cart" />
+    <child link="SUJ_PSM1_L0" />
+  </joint>
+  <link name="SUJ_PSM1_L1">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM1_J1" type="fixed">
+    <origin rpy="0 -0 0.0170323515" xyz="-0.024998 0 0.59" />
+    <parent link="SUJ_PSM1_L0" />
+    <child link="SUJ_PSM1_L1" />
+  </joint>
+  <link name="SUJ_PSM1_L2">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM1_J2" type="fixed">
+    <origin rpy="0 -0 -1.53451375" xyz="0.4575 0 0.144" />
+    <parent link="SUJ_PSM1_L1" />
+    <child link="SUJ_PSM1_L2" />
+  </joint>
+  <link name="SUJ_PSM1_L3">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM1_J3" type="fixed">
+    <origin rpy="0 -0 -1.15166905" xyz="0.458 0 -0.01875" />
+    <parent link="SUJ_PSM1_L2" />
+    <child link="SUJ_PSM1_L3" />
+  </joint>
+  <link name="SUJ_PSM1_L4" />
+  <joint name="SUJ_PSM1_fixed_J4" type="fixed">
+    <origin rpy="0.0 0.7854 0.0" xyz="0.045255 0.0 -0.045255" />
+    <parent link="SUJ_PSM1_L3" />
+    <child link="SUJ_PSM1_L4" />
+  </joint>
+  <link name="SUJ_PSM1_RCM" />
+  <joint name="SUJ_PSM1_fixed_RCM" type="fixed">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.8343 0.0 0.0" />
+    <parent link="SUJ_PSM1_L4" />
+    <child link="SUJ_PSM1_RCM" />
+  </joint>
+  <link name="SUJ_PSM2_L0">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L0.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM2_J0" type="fixed">
+    <origin rpy="0 -0 -1.57079633" xyz="0 -0.228 0.565010705" />
+    <parent link="SUJ_cart" />
+    <child link="SUJ_PSM2_L0" />
+  </joint>
+  <link name="SUJ_PSM2_L1">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM2_J1" type="fixed">
+    <origin rpy="0 -0 0.190353633" xyz="-0.024998 0 0.59" />
+    <parent link="SUJ_PSM2_L0" />
+    <child link="SUJ_PSM2_L1" />
+  </joint>
+  <link name="SUJ_PSM2_L2">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM2_J2" type="fixed">
+    <origin rpy="0 -0 1.34635121" xyz="0.4575 0 0.144" />
+    <parent link="SUJ_PSM2_L1" />
+    <child link="SUJ_PSM2_L2" />
+  </joint>
+  <link name="SUJ_PSM2_L3">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM12/SUJ_PSM12_L3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM2_J3" type="fixed">
+    <origin rpy="0 -0 1.34445295" xyz="0.458 0 -0.01875" />
+    <parent link="SUJ_PSM2_L2" />
+    <child link="SUJ_PSM2_L3" />
+  </joint>
+  <link name="SUJ_PSM2_L4" />
+  <joint name="SUJ_PSM2_fixed_J4" type="fixed">
+    <origin rpy="0.0 0.7854 0.0" xyz="0.045255 0.0 -0.045255" />
+    <parent link="SUJ_PSM2_L3" />
+    <child link="SUJ_PSM2_L4" />
+  </joint>
+  <link name="SUJ_PSM2_RCM" />
+  <joint name="SUJ_PSM2_fixed_RCM" type="fixed">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.8343 0.0 0.0" />
+    <parent link="SUJ_PSM2_L4" />
+    <child link="SUJ_PSM2_RCM" />
+  </joint>
+  <link name="SUJ_PSM3_L0">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L0.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM3_J0" type="fixed">
+    <origin rpy="0 -0 -3.14159265" xyz="-0.223 0 0.67755689" />
+    <parent link="SUJ_cart" />
+    <child link="SUJ_PSM3_L0" />
+  </joint>
+  <link name="SUJ_PSM3_L1">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM3_J1" type="fixed">
+    <origin rpy="0 -0 1.67015819" xyz="-0.024998 0 0.513" />
+    <parent link="SUJ_PSM3_L0" />
+    <child link="SUJ_PSM3_L1" />
+  </joint>
+  <link name="SUJ_PSM3_L2">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM3_J2" type="fixed">
+    <origin rpy="-3.14159265 -6.55039164e-17 -2.57722686" xyz="0.3429 0 -0.1942" />
+    <parent link="SUJ_PSM3_L1" />
+    <child link="SUJ_PSM3_L2" />
+  </joint>
+  <link name="SUJ_PSM3_L3">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM3_J3" type="fixed">
+    <origin rpy="-3.14159265 -1.01593839e-16 -2.16324355" xyz="0.4575 0 -0.0722" />
+    <parent link="SUJ_PSM3_L2" />
+    <child link="SUJ_PSM3_L3" />
+  </joint>
+  <link name="SUJ_PSM3_L4">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L4.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/PSM/PSM3/SUJ_PSM3_L4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_PSM3_J4" type="fixed">
+    <origin rpy="0 -0 0" xyz="0.458 0 -0.01875" />
+    <parent link="SUJ_PSM3_L3" />
+    <child link="SUJ_PSM3_L4" />
+  </joint>
+  <link name="SUJ_PSM3_L5" />
+  <joint name="SUJ_PSM3_fixed_J5" type="fixed">
+    <origin rpy="0.0 0.2618 0.0" xyz="0.045254 0.0 -0.11671" />
+    <parent link="SUJ_PSM3_L4" />
+    <child link="SUJ_PSM3_L5" />
+  </joint>
+  <link name="SUJ_PSM3_RCM" />
+  <joint name="SUJ_PSM3_fixed_RCM" type="fixed">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.8343 0.0 0.0" />
+    <parent link="SUJ_PSM3_L5" />
+    <child link="SUJ_PSM3_RCM" />
+  </joint>
+  <link name="SUJ_ECM_L0">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L0.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L0.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_ECM_J0" type="fixed">
+    <origin rpy="0 -0 0" xyz="0.223 0 0.758979281" />
+    <parent link="SUJ_cart" />
+    <child link="SUJ_ECM_L0" />
+  </joint>
+  <link name="SUJ_ECM_L1">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L1.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_ECM_J1" type="fixed">
+    <origin rpy="0 -0 -1.25542833" xyz="-0.025 0 0.5232" />
+    <parent link="SUJ_ECM_L0" />
+    <child link="SUJ_ECM_L1" />
+  </joint>
+  <link name="SUJ_ECM_L2">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L2.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_ECM_J2" type="fixed">
+    <origin rpy="0 -0 2.5323342" xyz="0.3302 0 0.1313" />
+    <parent link="SUJ_ECM_L1" />
+    <child link="SUJ_ECM_L2" />
+  </joint>
+  <link name="SUJ_ECM_L3">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/SUJ/Si/ECM/SUJ_ECM_L3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="SUJ_ECM_J3" type="fixed">
+    <origin rpy="0 -0 -1.2688684" xyz="0.3302 0 0.064" />
+    <parent link="SUJ_ECM_L2" />
+    <child link="SUJ_ECM_L3" />
+  </joint>
+  <link name="SUJ_ECM_L4" />
+  <joint name="SUJ_ECM_fixed_J4" type="fixed">
+    <origin rpy="0.0 1.2217 0.0" xyz="0.12857 0.0 -0.0109" />
+    <parent link="SUJ_ECM_L3" />
+    <child link="SUJ_ECM_L4" />
+  </joint>
+  <link name="SUJ_ECM_RCM" />
+  <joint name="SUJ_ECM_fixed_RCM" type="fixed">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.8343 0.0 0.0" />
+    <parent link="SUJ_ECM_L4" />
+    <child link="SUJ_ECM_RCM" />
+  </joint>
+  <material name="DaVinciWhite">
+    <color rgba="1.0 1.0 1.0 1" />
+  </material>
+  <material name="DaVinciLightGray">
+    <color rgba="0.8 0.8 0.8 1" />
+  </material>
+  <material name="DaVinciMedGray">
+    <color rgba="0.6 0.6 0.6 1" />
+  </material>
+  <material name="DaVinciDarkGray">
+    <color rgba="0.4 0.4 0.4 1" />
+  </material>
+  <material name="DaVinciRed">
+    <color rgba="0.5 0.4 0.4 1" />
+  </material>
+  <material name="DaVinciGreen">
+    <color rgba="0.4 0.5 0.4 1" />
+  </material>
+  <material name="DaVinciBlue">
+    <color rgba="0.4 0.4 0.5 1" />
+  </material>
+  <link name="PSM1_RCM_link">
+    
+    </link>
+  <joint name="PSM1_rcm_fixed" type="fixed">
+    <parent link="SUJ_PSM1_RCM" />
+    <child link="PSM1_RCM_link" />
+    <origin rpy="0.066878853 -0.089588286 -0.0899503162" xyz="-1.14071086e-10 3.57540664e-11 3.57542884e-11" />
+  </joint>
+  <link name="PSM1_base_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.080771 0.0 0.0" />
+      <mass value="1.5188" />
+      <inertia ixx="0.002395" ixy="-2.6476E-18" ixz="-1.3484E-18" iyy="0.0040794" iyz="4.2598E-10" izz="0.0043778" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM1_base_fixed" type="fixed">
+    <parent link="PSM1_RCM_link" />
+    <child link="PSM1_base_link" />
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 -0.84316314 0.0" />
+  </joint>
+  <link name="PSM1_yaw_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.1461 0.090363 -0.024957" />
+      <mass value="1.7571" />
+      <inertia ixx="0.0049404" ixy="-0.0035267" ixz="0.0045945" iyy="0.019686" iyz="0.00070407" izz="0.020795" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM1_yaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.158 0.0 0.0" />
+    <parent link="PSM1_base_link" />
+    <child link="PSM1_yaw_link" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit effort="17.0845" lower="-2.964" upper="2.964" velocity="1.57079633" />
+  </joint>
+  <link name="PSM1_pitch_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.083895 -0.00073113 -0.028998" />
+      <mass value="4.017" />
+      <inertia ixx="0.012797" ixy="-0.0002464" ixz="0.0011164" iyy="0.026307" iyz="8.5164E-05" izz="0.025616" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM1_pitch" type="revolute">
+    <origin rpy="0 -0.973 -3.14159265" xyz="0.2987 0 -0.071222" />
+    <parent link="PSM1_yaw_link" />
+    <child link="PSM1_pitch_link" />
+    <axis xyz="0.0 -1 0.0" />
+    <limit effort="17.0845" lower="-1.265" upper="1.301" velocity="1.57079633" />
+  </joint>
+  <link name="PSM1_pitch_2_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.11824 0.0 0.12932" />
+      <mass value="2.1982" />
+      <inertia ixx="0.0076428" ixy="-2.8207E-19" ixz="-0.0074855" iyy="0.032839" iyz="-1.4256E-19" izz="0.026585" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM1_pitch_2" type="revolute">
+    <origin rpy="0 -0.74611 -3.14159265" xyz="0.201812657 0 0.00858318473" />
+    <parent link="PSM1_pitch_link" />
+    <child link="PSM1_pitch_2_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="1.57079633" />
+    <mimic joint="PSM1_pitch" multiplier="-1" />
+  </joint>
+  <link name="PSM1_pitch_3_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.041219 0.0 0.13651" />
+      <mass value="0.75206" />
+      <inertia ixx="0.018546" ixy="3.3933E-09" ixz="0.00048607" iyy="0.018573" iyz="-1.7077E-08" izz="0.00039277" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM1_pitch_3" type="revolute">
+    <origin rpy="0 -0.22689 0" xyz="0.360537089 0 0.156330865" />
+    <parent link="PSM1_pitch_2_link" />
+    <child link="PSM1_pitch_3_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="1.57079633" />
+    <mimic joint="PSM1_pitch" multiplier="1" />
+  </joint>
+  <joint name="PSM1_insertion" type="prismatic">
+    <origin rpy="3.14159265 0 -3.14159265" xyz="0.10649 0 0.31095531" />
+    <parent link="PSM1_pitch_3_link" />
+    <child link="PSM1_adaptor_link" />
+    <axis xyz="0.0 0.0 1" />
+    <limit effort="40.9063" lower="0" upper="0.29" velocity="0.2" />
+  </joint>
+  <link name="PSM1_adaptor_link">
+    <inertial>
+      <origin xyz="0.0009315 0 0.003694" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="0.00012081911" ixy="0" ixz="0" iyy="8.58399831e-05" iyz="0" izz="5.4769505e-05" />
+    </inertial>
+  </link>
+  <joint name="PSM1_housing_fixed" type="fixed">
+    <parent link="PSM1_adaptor_link" />
+    <child link="PSM1_housing_link" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="PSM1_housing_link">
+    <visual>
+      <origin rpy="0.0 -1.5707963267948966 1.5707963267948966" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/housing/Si/housing_Si.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 -1.5707963267948966 1.5707963267948966" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/housing/Si/housing_Si.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM1_roll" type="revolute">
+    <parent link="PSM1_adaptor_link" />
+    <child link="PSM1_roll_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.4670" />
+    <limit effort="0.33" lower="-4.53786" upper="4.53786" velocity="18.8495559" />
+  </joint>
+  <link name="PSM1_roll_link">
+    <visual>
+      <origin rpy="0 -0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/generated/roll_4670.stl" />
+      </geometry>
+      <material name="roll_4670_shaft">
+        <color rgba="0.55 0.55 0.55 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0 0" xyz="0 0 -0.2319837" />
+      <geometry>
+        <cylinder length="0.4700326" radius="0.0043725" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-2.94887947e-20 6.90375689e-20 -0.2319837" rpy="0 0 0" />
+      <mass value="0.221600337" />
+      <inertia ixx="0.00408091118" ixy="-3.40350356e-24" ixz="-2.26563944e-22" iyy="0.00408091118" iyz="2.41196348e-21" izz="2.10479351e-06" />
+    </inertial>
+  </link>
+  <joint name="PSM1_wrist_pitch" type="revolute">
+    <parent link="PSM1_roll_link" />
+    <child link="PSM1_wrist_pitch_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="0.25" lower="-1.39626" upper="1.39626" velocity="18.8495559" />
+  </joint>
+  <link name="PSM1_wrist_pitch_link">
+    <visual>
+      <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0295 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/wrist_pitch/0091/wrist_pitch_0091.obj" scale="0.1 0.1 0.1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0042213 -0.00001255 -0.00003155" />
+      <geometry>
+        <box size="0.0062955 0.0145274 0.0063857" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0042213 -1.255e-05 -3.155e-05" rpy="0 0 0" />
+      <mass value="0.00461374647" />
+      <inertia ixx="3.09161325e-08" ixy="8.1265295e-24" ixz="-2.59251248e-24" iyy="9.63806527e-08" iyz="3.87163072e-25" izz="9.68204367e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM1_wrist_yaw" type="revolute">
+    <parent link="PSM1_wrist_pitch_link" />
+    <child link="PSM1_wrist_yaw_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0091 0.0 0.0" />
+    <limit effort="0.2" lower="-1.39626" upper="1.39626" velocity="18.8495559" />
+  </joint>
+  <link name="PSM1_wrist_yaw_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.000236" />
+      <geometry>
+        <mesh filename="meshes/instruments/wrist_yaw/0091/wrist_yaw_0091.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0000005 0.0 -0.0001145" />
+      <geometry>
+        <box size="0.001229 0.001230 0.005461" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="5e-07 0 -0.0001145" rpy="0 0 0" />
+      <mass value="6.5216316e-05" />
+      <inertia ixx="1.70298393e-10" ixy="-0" ixz="7.72153463e-28" iyy="1.70285029e-10" iyz="-0" izz="1.64309302e-11" />
+    </inertial>
+  </link>
+  <joint name="PSM1_jaw_1" type="revolute">
+    <parent link="PSM1_wrist_yaw_link" />
+    <child link="PSM1_jaw_1_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0 0.0" />
+    <limit effort="0.16" lower="-0.174533" upper="0.69813" velocity="9.42477796" />
+  </joint>
+  <link name="PSM1_jaw_1_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/tip/006/tip_006_1.obj" scale="1 0.905409932418 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="5e-07 0.00327713125038771 0.000469" />
+      <geometry>
+        <box size="0.004825 0.0109237708346257 0.003" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="5e-07 0.0036195 0.000469" rpy="0 0 0" />
+      <mass value="0.00137966291" />
+      <inertia ixx="1.77705441e-08" ixy="-5.05571093e-25" ixz="-3.83170696e-26" iyy="3.71136509e-09" iyz="-0" izz="1.94124148e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM1_jaw_2" type="revolute">
+    <parent link="PSM1_wrist_yaw_link" />
+    <child link="PSM1_jaw_2_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="1000" lower="-1.5707" upper="1.5707" velocity="9.42477796" />
+    <mimic joint="PSM1_jaw_1" multiplier="-1" />
+  </joint>
+  <link name="PSM1_jaw_2_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/tip/006/tip_006_2.obj" scale="1 0.905409932418 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="-5e-07 0.00327713125038771 -0.0004945" />
+      <geometry>
+        <box size="0.004825 0.0109237708346257 0.003" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-5e-07 0.0036195 -0.0004945" rpy="0 0 0" />
+      <mass value="0.00137966291" />
+      <inertia ixx="1.77705441e-08" ixy="5.05571093e-25" ixz="-7.89711396e-26" iyy="3.71136509e-09" iyz="-0" izz="1.94124148e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM1_tool_tip" type="fixed">
+    <parent link="PSM1_wrist_yaw_link" />
+    <child link="PSM1_tool_tip_link" />
+    <origin rpy="0 1.57079633 1.57079633" xyz="0 0 0" />
+  </joint>
+  <link name="PSM1_tool_tip_link" />
+  <link name="PSM2_RCM_link">
+    
+    </link>
+  <joint name="PSM2_rcm_fixed" type="fixed">
+    <parent link="SUJ_PSM2_RCM" />
+    <child link="PSM2_RCM_link" />
+    <origin rpy="-0.0909692586 0.0239561163 0.0239630814" xyz="2.58248978e-12 2.27040609e-14 2.26485497e-14" />
+  </joint>
+  <link name="PSM2_base_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.080771 0.0 0.0" />
+      <mass value="1.5188" />
+      <inertia ixx="0.002395" ixy="-2.6476E-18" ixz="-1.3484E-18" iyy="0.0040794" iyz="4.2598E-10" izz="0.0043778" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM2_base_fixed" type="fixed">
+    <parent link="PSM2_RCM_link" />
+    <child link="PSM2_base_link" />
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 -0.84316314 0.0" />
+  </joint>
+  <link name="PSM2_yaw_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.1461 0.090363 -0.024957" />
+      <mass value="1.7571" />
+      <inertia ixx="0.0049404" ixy="-0.0035267" ixz="0.0045945" iyy="0.019686" iyz="0.00070407" izz="0.020795" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM2_yaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.158 0.0 0.0" />
+    <parent link="PSM2_base_link" />
+    <child link="PSM2_yaw_link" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit effort="17.0845" lower="-2.964" upper="2.964" velocity="1.57079633" />
+  </joint>
+  <link name="PSM2_pitch_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.083895 -0.00073113 -0.028998" />
+      <mass value="4.017" />
+      <inertia ixx="0.012797" ixy="-0.0002464" ixz="0.0011164" iyy="0.026307" iyz="8.5164E-05" izz="0.025616" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM2_pitch" type="revolute">
+    <origin rpy="0 -0.973 -3.14159265" xyz="0.2987 0 -0.071222" />
+    <parent link="PSM2_yaw_link" />
+    <child link="PSM2_pitch_link" />
+    <axis xyz="0.0 -1 0.0" />
+    <limit effort="17.0845" lower="-1.265" upper="1.301" velocity="1.57079633" />
+  </joint>
+  <link name="PSM2_pitch_2_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.11824 0.0 0.12932" />
+      <mass value="2.1982" />
+      <inertia ixx="0.0076428" ixy="-2.8207E-19" ixz="-0.0074855" iyy="0.032839" iyz="-1.4256E-19" izz="0.026585" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM2_pitch_2" type="revolute">
+    <origin rpy="0 -0.74611 -3.14159265" xyz="0.201812657 0 0.00858318473" />
+    <parent link="PSM2_pitch_link" />
+    <child link="PSM2_pitch_2_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="1.57079633" />
+    <mimic joint="PSM2_pitch" multiplier="-1" />
+  </joint>
+  <link name="PSM2_pitch_3_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.041219 0.0 0.13651" />
+      <mass value="0.75206" />
+      <inertia ixx="0.018546" ixy="3.3933E-09" ixz="0.00048607" iyy="0.018573" iyz="-1.7077E-08" izz="0.00039277" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM2_pitch_3" type="revolute">
+    <origin rpy="0 -0.22689 0" xyz="0.360537089 0 0.156330865" />
+    <parent link="PSM2_pitch_2_link" />
+    <child link="PSM2_pitch_3_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="1.57079633" />
+    <mimic joint="PSM2_pitch" multiplier="1" />
+  </joint>
+  <joint name="PSM2_insertion" type="prismatic">
+    <origin rpy="3.14159265 0 -3.14159265" xyz="0.10649 0 0.31095531" />
+    <parent link="PSM2_pitch_3_link" />
+    <child link="PSM2_adaptor_link" />
+    <axis xyz="0.0 0.0 1" />
+    <limit effort="40.9063" lower="0" upper="0.29" velocity="0.2" />
+  </joint>
+  <link name="PSM2_adaptor_link">
+    <inertial>
+      <origin xyz="0.0009315 0 0.003694" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="0.00012081911" ixy="0" ixz="0" iyy="8.58399831e-05" iyz="0" izz="5.4769505e-05" />
+    </inertial>
+  </link>
+  <joint name="PSM2_housing_fixed" type="fixed">
+    <parent link="PSM2_adaptor_link" />
+    <child link="PSM2_housing_link" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="PSM2_housing_link">
+    <visual>
+      <origin rpy="0.0 -1.5707963267948966 1.5707963267948966" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/housing/Si/housing_Si.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 -1.5707963267948966 1.5707963267948966" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/housing/Si/housing_Si.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM2_roll" type="revolute">
+    <parent link="PSM2_adaptor_link" />
+    <child link="PSM2_roll_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.4670" />
+    <limit effort="0.33" lower="-4.53786" upper="4.53786" velocity="18.8495559" />
+  </joint>
+  <link name="PSM2_roll_link">
+    <visual>
+      <origin rpy="0 -0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/generated/roll_4670.stl" />
+      </geometry>
+      <material name="roll_4670_shaft">
+        <color rgba="0.55 0.55 0.55 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0 0" xyz="0 0 -0.2319837" />
+      <geometry>
+        <cylinder length="0.4700326" radius="0.0043725" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-2.94887947e-20 6.90375689e-20 -0.2319837" rpy="0 0 0" />
+      <mass value="0.221600337" />
+      <inertia ixx="0.00408091118" ixy="-3.40350356e-24" ixz="-2.26563944e-22" iyy="0.00408091118" iyz="2.41196348e-21" izz="2.10479351e-06" />
+    </inertial>
+  </link>
+  <joint name="PSM2_wrist_pitch" type="revolute">
+    <parent link="PSM2_roll_link" />
+    <child link="PSM2_wrist_pitch_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="0.25" lower="-1.39626" upper="1.39626" velocity="18.8495559" />
+  </joint>
+  <link name="PSM2_wrist_pitch_link">
+    <visual>
+      <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0295 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/wrist_pitch/0091/wrist_pitch_0091.obj" scale="0.1 0.1 0.1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0042213 -0.00001255 -0.00003155" />
+      <geometry>
+        <box size="0.0062955 0.0145274 0.0063857" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0042213 -1.255e-05 -3.155e-05" rpy="0 0 0" />
+      <mass value="0.00461374647" />
+      <inertia ixx="3.09161325e-08" ixy="8.1265295e-24" ixz="-2.59251248e-24" iyy="9.63806527e-08" iyz="3.87163072e-25" izz="9.68204367e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM2_wrist_yaw" type="revolute">
+    <parent link="PSM2_wrist_pitch_link" />
+    <child link="PSM2_wrist_yaw_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0091 0.0 0.0" />
+    <limit effort="0.2" lower="-1.39626" upper="1.39626" velocity="18.8495559" />
+  </joint>
+  <link name="PSM2_wrist_yaw_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.000236" />
+      <geometry>
+        <mesh filename="meshes/instruments/wrist_yaw/0091/wrist_yaw_0091.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0000005 0.0 -0.0001145" />
+      <geometry>
+        <box size="0.001229 0.001230 0.005461" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="5e-07 0 -0.0001145" rpy="0 0 0" />
+      <mass value="6.5216316e-05" />
+      <inertia ixx="1.70298393e-10" ixy="-0" ixz="7.72153463e-28" iyy="1.70285029e-10" iyz="-0" izz="1.64309302e-11" />
+    </inertial>
+  </link>
+  <joint name="PSM2_jaw_1" type="revolute">
+    <parent link="PSM2_wrist_yaw_link" />
+    <child link="PSM2_jaw_1_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="0.16" lower="-0.174533" upper="0.69813" velocity="9.42477796" />
+  </joint>
+  <link name="PSM2_jaw_1_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/generated/debakey_420036_jaw_1.stl" scale="1 0.8 1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.72 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.005039999824000001 0.0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00480000023 0.013919999840000002 0.00219999999" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0.00629999978 0" rpy="0 0 0" />
+      <mass value="0.00145157765" />
+      <inertia ixx="3.72087728e-08" ixy="-0" ixz="-0" iyy="3.37249899e-09" iyz="-0" izz="3.94103325e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM2_jaw_2" type="revolute">
+    <parent link="PSM2_wrist_yaw_link" />
+    <child link="PSM2_jaw_2_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="1000" lower="-1.5707" upper="1.5707" velocity="9.42477796" />
+    <mimic joint="PSM2_jaw_1" multiplier="-1" />
+  </joint>
+  <link name="PSM2_jaw_2_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/generated/debakey_420036_jaw_2.stl" scale="1 0.8 1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.72 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.005039999824000001 0.0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00480000023 0.013919999840000002 0.00219999999" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0.00629999978 0" rpy="0 0 0" />
+      <mass value="0.00145157765" />
+      <inertia ixx="3.72087728e-08" ixy="-0" ixz="-0" iyy="3.37249899e-09" iyz="-0" izz="3.94103325e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM2_tool_tip" type="fixed">
+    <parent link="PSM2_wrist_yaw_link" />
+    <child link="PSM2_tool_tip_link" />
+    <origin rpy="0 1.57079633 1.57079633" xyz="0 0 0" />
+  </joint>
+  <link name="PSM2_tool_tip_link" />
+  <link name="PSM3_RCM_link">
+    
+    </link>
+  <joint name="PSM3_rcm_fixed" type="fixed">
+    <parent link="SUJ_PSM3_RCM" />
+    <child link="PSM3_RCM_link" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="PSM3_base_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.080771 0.0 0.0" />
+      <mass value="1.5188" />
+      <inertia ixx="0.002395" ixy="-2.6476E-18" ixz="-1.3484E-18" iyy="0.0040794" iyz="4.2598E-10" izz="0.0043778" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM3_base_fixed" type="fixed">
+    <parent link="PSM3_RCM_link" />
+    <child link="PSM3_base_link" />
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 -0.84316314 0.0" />
+  </joint>
+  <link name="PSM3_yaw_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.1461 0.090363 -0.024957" />
+      <mass value="1.7571" />
+      <inertia ixx="0.0049404" ixy="-0.0035267" ixz="0.0045945" iyy="0.019686" iyz="0.00070407" izz="0.020795" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM3_yaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.158 0.0 0.0" />
+    <parent link="PSM3_base_link" />
+    <child link="PSM3_yaw_link" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit effort="17.0845" lower="-2.964" upper="2.964" velocity="1.57079633" />
+  </joint>
+  <link name="PSM3_pitch_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.083895 -0.00073113 -0.028998" />
+      <mass value="4.017" />
+      <inertia ixx="0.012797" ixy="-0.0002464" ixz="0.0011164" iyy="0.026307" iyz="8.5164E-05" izz="0.025616" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM3_pitch" type="revolute">
+    <origin rpy="0 -0.973 -3.14159265" xyz="0.2987 0 -0.071222" />
+    <parent link="PSM3_yaw_link" />
+    <child link="PSM3_pitch_link" />
+    <axis xyz="0.0 -1 0.0" />
+    <limit effort="17.0845" lower="-1.265" upper="1.301" velocity="1.57079633" />
+  </joint>
+  <link name="PSM3_pitch_2_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.11824 0.0 0.12932" />
+      <mass value="2.1982" />
+      <inertia ixx="0.0076428" ixy="-2.8207E-19" ixz="-0.0074855" iyy="0.032839" iyz="-1.4256E-19" izz="0.026585" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM3_pitch_2" type="revolute">
+    <origin rpy="0 -0.74611 -3.14159265" xyz="0.201812657 0 0.00858318473" />
+    <parent link="PSM3_pitch_link" />
+    <child link="PSM3_pitch_2_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="1.57079633" />
+    <mimic joint="PSM3_pitch" multiplier="-1" />
+  </joint>
+  <link name="PSM3_pitch_3_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.041219 0.0 0.13651" />
+      <mass value="0.75206" />
+      <inertia ixx="0.018546" ixy="3.3933E-09" ixz="0.00048607" iyy="0.018573" iyz="-1.7077E-08" izz="0.00039277" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM3_pitch_3" type="revolute">
+    <origin rpy="0 -0.22689 0" xyz="0.360537089 0 0.156330865" />
+    <parent link="PSM3_pitch_2_link" />
+    <child link="PSM3_pitch_3_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="1.57079633" />
+    <mimic joint="PSM3_pitch" multiplier="1" />
+  </joint>
+  <joint name="PSM3_insertion" type="prismatic">
+    <origin rpy="3.14159265 0 -3.14159265" xyz="0.10649 0 0.31095531" />
+    <parent link="PSM3_pitch_3_link" />
+    <child link="PSM3_adaptor_link" />
+    <axis xyz="0.0 0.0 1" />
+    <limit effort="40.9063" lower="0" upper="0.29" velocity="0.2" />
+  </joint>
+  <link name="PSM3_adaptor_link">
+    <inertial>
+      <origin xyz="0.0009315 0 0.003694" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="0.00012081911" ixy="0" ixz="0" iyy="8.58399831e-05" iyz="0" izz="5.4769505e-05" />
+    </inertial>
+  </link>
+  <joint name="PSM3_housing_fixed" type="fixed">
+    <parent link="PSM3_adaptor_link" />
+    <child link="PSM3_housing_link" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="PSM3_housing_link">
+    <visual>
+      <origin rpy="0.0 -1.5707963267948966 1.5707963267948966" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/housing/Si/housing_Si.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 -1.5707963267948966 1.5707963267948966" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/housing/Si/housing_Si.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PSM3_roll" type="revolute">
+    <parent link="PSM3_adaptor_link" />
+    <child link="PSM3_roll_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.4670" />
+    <limit effort="0.33" lower="-4.53786" upper="4.53786" velocity="18.8495559" />
+  </joint>
+  <link name="PSM3_roll_link">
+    <visual>
+      <origin rpy="0 -0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/generated/roll_4670.stl" />
+      </geometry>
+      <material name="roll_4670_shaft">
+        <color rgba="0.55 0.55 0.55 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0 0" xyz="0 0 -0.2319837" />
+      <geometry>
+        <cylinder length="0.4700326" radius="0.0043725" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-2.94887947e-20 6.90375689e-20 -0.2319837" rpy="0 0 0" />
+      <mass value="0.221600337" />
+      <inertia ixx="0.00408091118" ixy="-3.40350356e-24" ixz="-2.26563944e-22" iyy="0.00408091118" iyz="2.41196348e-21" izz="2.10479351e-06" />
+    </inertial>
+  </link>
+  <joint name="PSM3_wrist_pitch" type="revolute">
+    <parent link="PSM3_roll_link" />
+    <child link="PSM3_wrist_pitch_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="0.25" lower="-1.39626" upper="1.39626" velocity="18.8495559" />
+  </joint>
+  <link name="PSM3_wrist_pitch_link">
+    <visual>
+      <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0295 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/wrist_pitch/0091/wrist_pitch_0091.obj" scale="0.1 0.1 0.1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 1.5707963267948966 1.5707963267948966" xyz="0.0042213 -0.00001255 -0.00003155" />
+      <geometry>
+        <box size="0.0062955 0.0145274 0.0063857" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0042213 -1.255e-05 -3.155e-05" rpy="0 0 0" />
+      <mass value="0.00461374647" />
+      <inertia ixx="3.09161325e-08" ixy="8.1265295e-24" ixz="-2.59251248e-24" iyy="9.63806527e-08" iyz="3.87163072e-25" izz="9.68204367e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM3_wrist_yaw" type="revolute">
+    <parent link="PSM3_wrist_pitch_link" />
+    <child link="PSM3_wrist_yaw_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0091 0.0 0.0" />
+    <limit effort="0.2" lower="-1.39626" upper="1.39626" velocity="18.8495559" />
+  </joint>
+  <link name="PSM3_wrist_yaw_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.000236" />
+      <geometry>
+        <mesh filename="meshes/instruments/wrist_yaw/0091/wrist_yaw_0091.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0000005 0.0 -0.0001145" />
+      <geometry>
+        <box size="0.001229 0.001230 0.005461" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="5e-07 0 -0.0001145" rpy="0 0 0" />
+      <mass value="6.5216316e-05" />
+      <inertia ixx="1.70298393e-10" ixy="-0" ixz="7.72153463e-28" iyy="1.70285029e-10" iyz="-0" izz="1.64309302e-11" />
+    </inertial>
+  </link>
+  <joint name="PSM3_jaw_1" type="revolute">
+    <parent link="PSM3_wrist_yaw_link" />
+    <child link="PSM3_jaw_1_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0 0.0" />
+    <limit effort="0.16" lower="-0.174533" upper="0.69813" velocity="9.42477796" />
+  </joint>
+  <link name="PSM3_jaw_1_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/tip/006/tip_006_1.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0000005 0.0036195 0.000469" />
+      <geometry>
+        <box size="0.004825 0.012065 0.003000" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="5e-07 0.0036195 0.000469" rpy="0 0 0" />
+      <mass value="0.00137966291" />
+      <inertia ixx="1.77705441e-08" ixy="-5.05571093e-25" ixz="-3.83170696e-26" iyy="3.71136509e-09" iyz="-0" izz="1.94124148e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM3_jaw_2" type="revolute">
+    <parent link="PSM3_wrist_yaw_link" />
+    <child link="PSM3_jaw_2_link" />
+    <axis xyz="0.0 0.0 1" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+    <limit effort="1000" lower="-1.5707" upper="1.5707" velocity="9.42477796" />
+    <mimic joint="PSM3_jaw_1" multiplier="-1" />
+  </joint>
+  <link name="PSM3_jaw_2_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/instruments/tip/006/tip_006_2.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.0000005 0.0036195 -0.0004945" />
+      <geometry>
+        <box size="0.004825 0.012065 0.003000" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-5e-07 0.0036195 -0.0004945" rpy="0 0 0" />
+      <mass value="0.00137966291" />
+      <inertia ixx="1.77705441e-08" ixy="5.05571093e-25" ixz="-7.89711396e-26" iyy="3.71136509e-09" iyz="-0" izz="1.94124148e-08" />
+    </inertial>
+  </link>
+  <joint name="PSM3_tool_tip" type="fixed">
+    <parent link="PSM3_wrist_yaw_link" />
+    <child link="PSM3_tool_tip_link" />
+    <origin rpy="0 1.57079633 1.57079633" xyz="0 0 0" />
+  </joint>
+  <link name="PSM3_tool_tip_link" />
+  <link name="ECM_RCM_link">
+    
+    </link>
+  <joint name="ECM_rcm_fixed" type="fixed">
+    <parent link="SUJ_ECM_RCM" />
+    <child link="ECM_RCM_link" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="ECM_base_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.080771 0.0 0.0" />
+      <mass value="1.5188" />
+      <inertia ixx="0.002395" ixy="-2.6476E-18" ixz="-1.3484E-18" iyy="0.0040794" iyz="4.2598E-10" izz="0.0043778" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_base.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ECM_base_fixed" type="fixed">
+    <parent link="ECM_RCM_link" />
+    <child link="ECM_base_link" />
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 -0.84316314 0.0" />
+  </joint>
+  <link name="ECM_yaw_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.1461 0.090363 -0.024957" />
+      <mass value="1.7571" />
+      <inertia ixx="0.0049404" ixy="-0.0035267" ixz="0.0045945" iyy="0.019686" iyz="0.00070407" izz="0.020795" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_yaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ECM_yaw" type="revolute">
+    <origin rpy="0.0 0.0 0.0" xyz="0.158 0.0 0.0" />
+    <parent link="ECM_base_link" />
+    <child link="ECM_yaw_link" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit effort="17.0845" lower="-2.964" upper="2.964" velocity="0.523598776" />
+  </joint>
+  <link name="ECM_pitch_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.083895 -0.00073113 -0.028998" />
+      <mass value="4.017" />
+      <inertia ixx="0.012797" ixy="-0.0002464" ixz="0.0011164" iyy="0.026307" iyz="8.5164E-05" izz="0.025616" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ECM_pitch" type="revolute">
+    <origin rpy="0 -0.973 -3.14159265" xyz="0.2987 0 -0.071222" />
+    <parent link="ECM_yaw_link" />
+    <child link="ECM_pitch_link" />
+    <axis xyz="0.0 -1 0.0" />
+    <limit effort="34.0845" lower="-1.1" upper="1.04" velocity="0.523598776" />
+  </joint>
+  <link name="ECM_pitch_2_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.11824 0.0 0.12932" />
+      <mass value="2.1982" />
+      <inertia ixx="0.0076428" ixy="-2.8207E-19" ixz="-0.0074855" iyy="0.032839" iyz="-1.4256E-19" izz="0.026585" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ECM_pitch_2" type="revolute">
+    <origin rpy="0 -0.74611 -3.14159265" xyz="0.201812657 0 0.00858318473" />
+    <parent link="ECM_pitch_link" />
+    <child link="ECM_pitch_2_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="0.523598776" />
+    <mimic joint="ECM_pitch" multiplier="-1" />
+  </joint>
+  <link name="ECM_pitch_3_link">
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.041219 0.0 0.13651" />
+      <mass value="0.75206" />
+      <inertia ixx="0.018546" ixy="3.3933E-09" ixz="0.00048607" iyy="0.018573" iyz="-1.7077E-08" izz="0.00039277" />
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.80000 0.80000 0.80000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/arms/Si/USM/USM_pitch_4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ECM_pitch_3" type="revolute">
+    <origin rpy="0 -0.22689 0" xyz="0.360537089 0 0.156330865" />
+    <parent link="ECM_pitch_2_link" />
+    <child link="ECM_pitch_3_link" />
+    <axis xyz="0.0 1 0.0" />
+    <limit effort="1000" lower="-3.14" upper="3.14" velocity="0.523598776" />
+    <mimic joint="ECM_pitch" multiplier="1" />
+  </joint>
+  <joint name="ECM_insertion" type="prismatic">
+    <origin rpy="3.14159265 0 0" xyz="0.10649 0 0.21055531" />
+    <parent link="ECM_pitch_3_link" />
+    <child link="ECM_insertion_link" />
+    <axis xyz="0.0 0.0 1" />
+    <limit effort="70.9" lower="0.001" upper="0.259" velocity="0.06" />
+  </joint>
+  <link name="ECM_insertion_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-07" ixy="0" ixz="0" iyy="1e-07" iyz="0" izz="1e-07" />
+    </inertial>
+  </link>
+  <joint name="ECM_roll" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <parent link="ECM_insertion_link" />
+    <child link="ECM_roll_link" />
+    <axis xyz="0.0 0.0 1" />
+    <limit effort="6.81923" lower="-1.54" upper="1.54" velocity="0.523598776" />
+  </joint>
+  <link name="ECM_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-07" ixy="0" ixz="0" iyy="1e-07" iyz="0" izz="1e-07" />
+    </inertial>
+  </link>
+  <joint name="ECM_adaptor_fixed" type="fixed">
+    <parent link="ECM_roll_link" />
+    <child link="ECM_adaptor_link" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="ECM_adaptor_link" />
+  <material name="SiEndoscopeCameraBody">
+    <color rgba="0.34 0.38 0.40 1" />
+  </material>
+  <material name="SiEndoscopeBlack">
+    <color rgba="0.015 0.015 0.014 1" />
+  </material>
+  <material name="SiEndoscopeMetal">
+    <color rgba="0.72 0.72 0.70 1" />
+  </material>
+  <material name="SiEndoscopeGreen">
+    <color rgba="0.00 0.62 0.43 1" />
+  </material>
+  <material name="SiEndoscopeLens">
+    <color rgba="0.005 0.006 0.008 1" />
+  </material>
+  <joint name="ECM_endoscope" type="fixed">
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 0.0 -0.3751" />
+    <parent link="ECM_adaptor_link" />
+    <child link="ECM_endoscope_link" />
+  </joint>
+  <link name="ECM_endoscope_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/endoscopes/Si_straight/Si_straight_body.dae" />
+      </geometry>
+      <material name="SiEndoscopeCameraBody" />
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/endoscopes/Si_straight/Si_straight_black.dae" />
+      </geometry>
+      <material name="SiEndoscopeBlack" />
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/endoscopes/Si_straight/Si_straight_metal.dae" />
+      </geometry>
+      <material name="SiEndoscopeMetal" />
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/endoscopes/Si_straight/Si_straight_green.dae" />
+      </geometry>
+      <material name="SiEndoscopeGreen" />
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/endoscopes/Si_straight/Si_straight_lens.dae" />
+      </geometry>
+      <material name="SiEndoscopeLens" />
+    </visual>
+    <collision>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/endoscopes/Si_straight/Si_straight_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="ECM_endoscope_frame" type="fixed">
+    <origin rpy="-1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0 0.0 0.758" />
+    <parent link="ECM_endoscope_link" />
+    <child link="ECM_endoscope_frame_link" />
+  </joint>
+  <link name="ECM_endoscope_frame_link" />
+  <joint name="ECM_tip" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+    <parent link="ECM_endoscope_frame_link" />
+    <child link="ECM_tip_link" />
+  </joint>
+  <link name="ECM_tip_link" />
+  <joint name="ECM_camera" type="fixed">
+    <parent link="ECM_tip_link" />
+    <child link="ECM_camera_link" />
+    <origin xyz="0 0 0" rpy="1.57079633 -0 1.57079633" />
+  </joint>
+  <link name="ECM_camera_link" />
+</robot>

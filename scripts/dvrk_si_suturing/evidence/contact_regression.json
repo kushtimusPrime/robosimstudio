@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "asset": "generated suturing contact URDF (path changes on restore)",
+  "frames": 9,
+  "links": 82,
+  "checks": [
+    "frozen calibration",
+    "non-collision XML",
+    "recorded FK",
+    "4-arm IK",
+    "joint locks",
+    "visual vs IK FK"
+  ]
+}

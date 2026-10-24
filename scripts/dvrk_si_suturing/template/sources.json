@@ -1,0 +1,58 @@
+{
+  "dataset": "https://huggingface.co/datasets/jchen396/SutureBot",
+  "paper": {
+    "url": "https://arxiv.org/html/2510.20965v1",
+    "identified": [
+      "3-DMed Soft Tissue Suture Pad",
+      "green braided polyester 3-0 Ethibond",
+      "dVRK Si"
+    ],
+    "not_identified": [
+      "needle SKU, wire diameter and arc",
+      "cut thread length per episode",
+      "pad thickness and constitutive constants",
+      "needle puncture work",
+      "thread/tissue friction and force measurements"
+    ]
+  },
+  "manufacturer_catalog": {
+    "url": "https://www.jnjmedtech.com/sites/default/files/user_uploaded_assets/pdf_assets/2020-11/Wound-Closure-Catalog-115681-190531.pdf",
+    "candidate_needles": [
+      "SH-1: 22 mm, half circle, X762H",
+      "SH: 26 mm, half circle, X832H or CX13D"
+    ],
+    "interpretation": "Candidates only; no SKU established. The current preliminary image fit is a 24.0 mm arc."
+  },
+  "pad_manufacturer": "https://www.3-dmed.com/products/product-suturing-anastomosis/",
+  "physics_references": [
+    {
+      "url": "https://arxiv.org/html/2607.27494v1",
+      "scope": "Suturing with coupled PBD thread and MPM tissue; alternative solver architecture, not evidence of SutureBot material constants."
+    },
+    {
+      "url": "https://inria.hal.science/hal-03187709/file/Interactive_Finite_Element_model_of_needle_insertion_and_laceration__AAM_.pdf",
+      "scope": "FEM needle insertion, puncture and laceration; reference for a future validated puncture model."
+    },
+    {
+      "url": "https://pepite-depot.univ-lille.fr/LIBRE/Autres/2010/50376-2010-Guebert.pdf",
+      "scope": "Complementarity constraints and heterogeneous suturing models."
+    },
+    {
+      "url": "https://www.sofa-framework.org/api/master/sofa/html/classsofa_1_1component_1_1constraint_1_1lagrangian_1_1model_1_1_sliding_lagrangian_constraint.html",
+      "scope": "Candidate barycentric FEM and sliding-constraint backend for puncture; installed free-fall smoke test only, not integrated or validated for suturing."
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/latest/modeling.html",
+      "scope": "Contact solref/solimp and numerical stiffness; not evidence of SutureBot material constants."
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/latest/computation/",
+      "scope": "Six-dimensional contact with torsional and rolling friction lengths; finite contact patch approximation."
+    }
+  ],
+  "held_out_do_not_tune": [
+    "tissue_6/2_needle_throw/20250501-194221-341946",
+    "tissue_7/2_needle_throw/20250502-195952-837967"
+  ],
+  "fitting_policy": "Shared physical parameters; per-episode initial conditions and pad placement; fixed existing camera and robot calibration. Appearance and physical motion objectives must be reported separately."
+}

@@ -1,0 +1,15 @@
+{
+  "time_s": 4.499999999999926,
+  "reference_time_s": 0.5000000000000003,
+  "max_held_surface_drift_mm": 0.11104153347335041,
+  "max_held_rotation_deg": 0.41861136341653177,
+  "max_initial_settling_surface_motion_mm": 0.022559163834698026,
+  "maximum_penetration_um": 0.00011118896606451584,
+  "max_mimic_error_rad": 8.642673492431641e-07,
+  "finite": true,
+  "wrist_travel_mm": 5.102156117796876,
+  "release_evaluated": true,
+  "max_release_jaw_contacts": 0,
+  "release_relative_displacement_mm": 490.4212072478996,
+  "pass": true
+}

@@ -1,0 +1,53 @@
+{
+  "status": "Unfitted engineering priors; not measured SutureBot properties",
+  "needle": {
+    "arc_length_m": 0.02402619278407805,
+    "angle_rad": 3.141592653589793,
+    "radius_m": 0.00024,
+    "density_kg_m3": 7900,
+    "tip_taper_m": 0.0025,
+    "friction": 0.3,
+    "dimension_status": "Preliminary three-frame circular-arc image fit, 24.0 mm; manufacturer SKU not established; reserved tip error 21.7 px"
+  },
+  "thread": {
+    "radius_m": 0.000115,
+    "density_kg_m3": 1380,
+    "bending_modulus_Pa": 15000000,
+    "axial_stiffness_N": 25.0,
+    "friction": 0.3,
+    "stiffness_damping_s": 0.0005
+  },
+  "tissue": {
+    "young_Pa": 80000,
+    "poisson": 0.45,
+    "density_kg_m3": 1050,
+    "stiffness_damping_s": 0.005,
+    "friction": 0.45,
+    "size_m": [
+      0.15,
+      0.15,
+      0.008
+    ],
+    "wound_length_m": 0.025,
+    "wound_depth_m": 0.003,
+    "rigid_backing_m": 0.002
+  },
+  "numerics": {
+    "control_hz": 200,
+    "rigid_substeps": 4,
+    "deformable_substeps": 10,
+    "newton_iterations": 64,
+    "contact_penalty_Pa_per_m": 10000000000,
+    "contact_threshold_m": 2e-05,
+    "contact_smoothing_m": 1e-05,
+    "friction_falloff_m_per_s": 0.0001
+  },
+  "episode": "tissue_4/2_needle_throw/20250429-205402-595720",
+  "setup": "setup_017",
+  "initial_image_frame": 0,
+  "control": {
+    "grasp_preload_rad": 0.015,
+    "note": "Closure target bias for contact force, separate from measured-jaw display mapping; provisional controller parameter.",
+    "closure_ramp_s": 0.02
+  }
+}

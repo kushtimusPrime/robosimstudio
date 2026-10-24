@@ -1,0 +1,18 @@
+{
+  "episode": "tissue_4/2_needle_throw/20250429-205402-595720",
+  "setup": "setup_017",
+  "frame_indices": [
+    0,
+    70,
+    141,
+    211,
+    282,
+    352,
+    422,
+    493,
+    563
+  ],
+  "source": "https://huggingface.co/datasets/jchen396/SutureBot",
+  "camera": "left; calibrated",
+  "fps": 30
+}

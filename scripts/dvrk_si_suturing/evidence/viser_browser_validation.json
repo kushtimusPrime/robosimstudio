@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "scrubbed_times": [
+    0,
+    2.5,
+    4.5
+  ],
+  "text": "Software WebGL rendering detected\nWebGL is running in software mode, not on your GPU. Performance may be degraded. If this is unexpected, check that hardware acceleration is enabled in your browser settings.\nConnected\n\nRecorded contact physics \u2014 dVRK Si\n\nHold, carry, return, release. No needle attachment to the gripper. Thread and tissue are excluded from this diagnostic. Playback displays saved simulation states; fresh physics runs in Studio on port 8082.\n\nPlay recorded physics\n\nLoop\n\nPlayback speed\n\nSimulation time (s)\n\n0\n4.5\n\nView\n\nRelease\n\nMeasured gates\n\nMaximum held needle-surface drift: 0.111 mm. The needle releases when the jaws open. The physical constants are assumptions, not a SutureBot material fit."
+}
